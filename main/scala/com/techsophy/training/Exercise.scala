@@ -19,32 +19,43 @@ class Exercise {
   }
 
   def fill(element: Int)(noOfTimes: Int): List[Int] = {
-    if (noOfTimes == 0) List()
-    else
+    if (noOfTimes == 0) {
+      List()
+    }
+    else {
       element :: fill(element)(noOfTimes - 1)
+    }
   }
 
   def reverse(list: List[Int]): List[Int] = {
-    if (list.isEmpty) List()
-    else
+    if (list.isEmpty) {
+      List()
+    }
+    else {
       reverse(list.tail) :+ list.head
+    }
   }
 
   def rotate(a: Array[Int], r: Int): Array[Int] = {
     var rList = Array[Int]()
     for (i <- 1 to r) {
-      if (i == 1)
+      if (i == 1) {
         rList = a.tail :+ a.head
-      else
+      }
+      else {
         rList = rList.tail :+ rList.head
+      }
     }
     rList
   }
 
   def sum(opt1: Option[Int], opt2: Option[Int]): Option[Int] = {
-    if (opt1.nonEmpty && opt2.nonEmpty) Some(opt1.get + opt2.get)
-    else
+    if (opt1.nonEmpty && opt2.nonEmpty) {
+      Some(opt1.get + opt2.get)
+    }
+    else {
       None
+    }
   }
 
   def concat(list1: List[Int], list2: List[Int]): List[Int] = {
@@ -95,8 +106,12 @@ class Exercise {
       case (xs, Nil) => xs
       case (x :: xs1, y :: ys1) =>
         logger.info(s"x = $x ,$xs1 and y=$y ,  $ys1")
-        if (x < y) x :: merge(xs1, list2)
-        else y :: merge(list1, ys1)
+        if (x < y) {
+          x :: merge(xs1, list2)
+        }
+        else {
+          y :: merge(list1, ys1)
+        }
     }
   }
 
@@ -107,9 +122,15 @@ class Exercise {
         hra = 1
         emp.salary.hra + (0.2 * emp.salary.hra)
       }
-      else emp.salary.basic + (0.1 * emp.salary.basic)
-      if (hra == 1) emp.copy(salary = Salary(emp.salary.basic, salary1, emp.salary.ta))
-      else emp.copy(salary = Salary(salary1, emp.salary.hra, emp.salary.ta))
+      else {
+        emp.salary.basic + (0.1 * emp.salary.basic)
+      }
+      if (hra == 1) {
+        emp.copy(salary = Salary(emp.salary.basic, salary1, emp.salary.ta))
+      }
+      else {
+        emp.copy(salary = Salary(salary1, emp.salary.hra, emp.salary.ta))
+      }
     }
   }
 
@@ -137,11 +158,18 @@ class Exercise {
 
   def countFiles(dir: String): Option[Int] = {
     val directory = new File(dir)
-    val list = directory.listFiles()
-    if (list.length > 0) {
-      Some(list.length)
+    if (directory.exists()) {
+      val list = directory.listFiles()
+      if (list.length > 0) {
+        Some(list.length)
+      }
+      else {
+        None
+      }
     }
-    else None
+    else {
+      None
+    }
   }
 }
 
