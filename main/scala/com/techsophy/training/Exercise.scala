@@ -106,8 +106,12 @@ class Exercise {
       case (xs, Nil) => xs
       case (x :: xs1, y :: ys1) =>
         logger.info(s"x = $x ,$xs1 and y=$y ,  $ys1")
-        if (x < y) {x :: merge(xs1, list2)}
-        else {y :: merge(list1, ys1)}
+        if (x < y) {
+          x :: merge(xs1, list2)
+        }
+        else {
+          y :: merge(list1, ys1)
+        }
     }
   }
 
@@ -118,9 +122,15 @@ class Exercise {
         hra = 1
         emp.salary.hra + (0.2 * emp.salary.hra)
       }
-      else {emp.salary.basic + (0.1 * emp.salary.basic)}
-      if (hra == 1) {emp.copy(salary = Salary(emp.salary.basic, salary1, emp.salary.ta))}
-      else {emp.copy(salary = Salary(salary1, emp.salary.hra, emp.salary.ta))}
+      else {
+        emp.salary.basic + (0.1 * emp.salary.basic)
+      }
+      if (hra == 1) {
+        emp.copy(salary = Salary(emp.salary.basic, salary1, emp.salary.ta))
+      }
+      else {
+        emp.copy(salary = Salary(salary1, emp.salary.hra, emp.salary.ta))
+      }
     }
   }
 
@@ -148,11 +158,18 @@ class Exercise {
 
   def countFiles(dir: String): Option[Int] = {
     val directory = new File(dir)
-    val list = directory.listFiles()
-    if (list.length > 0) {
-      Some(list.length)
+    if (directory.exists()) {
+      val list = directory.listFiles()
+      if (list.length > 0) {
+        Some(list.length)
+      }
+      else {
+        None
+      }
     }
-    else {None}
+    else {
+      None
+    }
   }
 }
 
