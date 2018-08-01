@@ -1,0 +1,758 @@
+<html>
+      <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title id="title">
+          com/skafka/example/SimpleConsumer.scala.html
+        </title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.20.1/css/theme.default.min.css" type="text/css"/><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.20.1/js/jquery.tablesorter.min.js"></script><link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" type="text/css"/><script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script><script type="text/javascript">
+        $(document).ready(function() {$(".tablesorter").tablesorter();});
+      </script>
+        <style>
+          table.codegrid { font-family: monospace; font-size: 12px; width: auto!important; }table.statementlist { width: auto!important; font-size: 13px; } table.codegrid td { padding: 0!important; border: 0!important } table td.linenumber { width: 40px!important; } 
+        </style>
+      </head>
+      <body style="font-family: monospace;">
+        <ul class="nav nav-tabs">
+          <li>
+            <a href="#codegrid" data-toggle="tab">Codegrid</a>
+          </li>
+          <li>
+            <a href="#statementlist" data-toggle="tab">Statement List</a>
+          </li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane active" id="codegrid">
+            <pre style='font-size: 12pt; font-family: courier;'>1 <span style=''>package com.skafka.example
+</span>2 <span style=''>import org.apache.kafka.clients.consumer.{ConsumerRecords}
+</span>3 <span style=''>import java.util.Properties
+</span>4 <span style=''>
+</span>5 <span style=''>import org.apache.kafka.common.errors.WakeupException
+</span>6 <span style=''>import org.apache.kafka.common.serialization.StringDeserializer
+</span>7 <span style=''>import org.slf4j.LoggerFactory
+</span>8 <span style=''>
+</span>9 <span style=''>import scala.collection.JavaConversions._
+</span>10 <span style=''>
+</span>11 <span style=''>class SimpleConsumer(groupId : String,topic : List[String])  extends KafkaConsumer {
+</span>12 <span style=''>  val logger = </span><span style='background: #AEF1AE'>LoggerFactory.getLogger(this.getClass)</span><span style=''>
+</span>13 <span style=''>
+</span>14 <span style=''>  private val timeout = </span><span style='background: #AEF1AE'>10000L</span><span style=''>
+</span>15 <span style=''>
+</span>16 <span style=''>  private val props = </span><span style='background: #AEF1AE'>new Properties()</span><span style=''>
+</span>17 <span style=''>  </span><span style='background: #AEF1AE'>props.put(&quot;bootstrap.servers&quot;, &quot;localhost :9092&quot;)</span><span style=''>
+</span>18 <span style=''>  </span><span style='background: #AEF1AE'>props.put(&quot;group.id&quot;, groupId)</span><span style=''>
+</span>19 <span style=''>  </span><span style='background: #AEF1AE'>props.put(&quot;key.deserializer&quot;, classOf[StringDeserializer].getName)</span><span style=''>
+</span>20 <span style=''>  </span><span style='background: #AEF1AE'>props.put(&quot;value.deserializer&quot;, classOf[StringDeserializer].getName)</span><span style=''>
+</span>21 <span style=''>  </span><span style='background: #AEF1AE'>props.put(&quot;max.poll.records&quot;, &quot;1&quot;)</span><span style=''>
+</span>22 <span style=''>
+</span>23 <span style=''>  private val consumer = </span><span style='background: #AEF1AE'>new org.apache.kafka.clients.consumer.KafkaConsumer[String, String](props)</span><span style=''>
+</span>24 <span style=''>  </span><span style='background: #AEF1AE'>consumer .subscribe(topic)</span><span style=''>
+</span>25 <span style=''>  def read () :Option[(String,String)] = {
+</span>26 <span style=''>    try {
+</span>27 <span style=''>      </span><span style='background: #AEF1AE'>val records: ConsumerRecords[String, String] = consumer.poll(timeout)
+</span>28 <span style=''></span><span style='background: #AEF1AE'>      records.map(record =&gt; (record.topic, record.value)).headOption</span><span style=''>
+</span>29 <span style=''>    }
+</span>30 <span style=''>    catch{
+</span>31 <span style=''>      case wue: WakeupException =&gt;
+</span>32 <span style=''>        </span><span style='background: #F0ADAD'>logger.debug(&quot;Error in reading from kafka &quot;, wue)</span><span style=''>
+</span>33 <span style=''>        </span><span style='background: #F0ADAD'>None</span><span style=''>
+</span>34 <span style=''>      case ex: Exception =&gt;
+</span>35 <span style=''>        </span><span style='background: #AEF1AE'>logger.error(&quot;Error in reading from kafka &quot;, ex)</span><span style=''>
+</span>36 <span style=''>        </span><span style='background: #AEF1AE'>None</span><span style=''>
+</span>37 <span style=''>    }
+</span>38 <span style=''>  }
+</span>39 <span style=''>}
+</span>40 <span style=''>trait KafkaConsumer {
+</span>41 <span style=''>  def read () : Option[(String,String)]
+</span>42 <span style=''>}
+</span></pre>
+          </div>
+          <div class="tab-pane" id="statementlist">
+            <table cellspacing="0" cellpadding="0" class="table statementlist">
+      <tr>
+        <th>Line</th>
+        <th>Stmt Id</th>
+        <th>Pos</th>
+        <th>Tree</th>
+        <th>Symbol</th>
+        <th>Code</th>
+      </tr><tr>
+        <td>
+          12
+        </td>
+        <td>
+          2
+        </td>
+        <td>
+          408
+          -
+          446
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          org.slf4j.LoggerFactory.getLogger
+        </td>
+        <td style="background: #AEF1AE">
+          org.slf4j.LoggerFactory.getLogger(this.getClass())
+        </td>
+      </tr><tr>
+        <td>
+          12
+        </td>
+        <td>
+          1
+        </td>
+        <td>
+          432
+          -
+          445
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.lang.Object.getClass
+        </td>
+        <td style="background: #AEF1AE">
+          this.getClass()
+        </td>
+      </tr><tr>
+        <td>
+          14
+        </td>
+        <td>
+          3
+        </td>
+        <td>
+          472
+          -
+          478
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          10000L
+        </td>
+      </tr><tr>
+        <td>
+          16
+        </td>
+        <td>
+          4
+        </td>
+        <td>
+          502
+          -
+          518
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.util.Properties.&lt;init&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          new java.util.Properties()
+        </td>
+      </tr><tr>
+        <td>
+          17
+        </td>
+        <td>
+          5
+        </td>
+        <td>
+          521
+          -
+          570
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.util.Hashtable.put
+        </td>
+        <td style="background: #AEF1AE">
+          SimpleConsumer.this.props.put(&quot;bootstrap.servers&quot;, &quot;localhost :9092&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          18
+        </td>
+        <td>
+          8
+        </td>
+        <td>
+          573
+          -
+          603
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.util.Hashtable.put
+        </td>
+        <td style="background: #AEF1AE">
+          SimpleConsumer.this.props.put(&quot;group.id&quot;, SimpleConsumer.this.groupId)
+        </td>
+      </tr><tr>
+        <td>
+          18
+        </td>
+        <td>
+          7
+        </td>
+        <td>
+          595
+          -
+          602
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          com.skafka.example.SimpleConsumer.groupId
+        </td>
+        <td style="background: #AEF1AE">
+          SimpleConsumer.this.groupId
+        </td>
+      </tr><tr>
+        <td>
+          18
+        </td>
+        <td>
+          6
+        </td>
+        <td>
+          583
+          -
+          593
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;group.id&quot;
+        </td>
+      </tr><tr>
+        <td>
+          19
+        </td>
+        <td>
+          11
+        </td>
+        <td>
+          606
+          -
+          672
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.util.Hashtable.put
+        </td>
+        <td style="background: #AEF1AE">
+          SimpleConsumer.this.props.put(&quot;key.deserializer&quot;, classOf[org.apache.kafka.common.serialization.StringDeserializer].getName())
+        </td>
+      </tr><tr>
+        <td>
+          19
+        </td>
+        <td>
+          10
+        </td>
+        <td>
+          636
+          -
+          671
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.lang.Class.getName
+        </td>
+        <td style="background: #AEF1AE">
+          classOf[org.apache.kafka.common.serialization.StringDeserializer].getName()
+        </td>
+      </tr><tr>
+        <td>
+          19
+        </td>
+        <td>
+          9
+        </td>
+        <td>
+          616
+          -
+          634
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;key.deserializer&quot;
+        </td>
+      </tr><tr>
+        <td>
+          20
+        </td>
+        <td>
+          14
+        </td>
+        <td>
+          675
+          -
+          743
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.util.Hashtable.put
+        </td>
+        <td style="background: #AEF1AE">
+          SimpleConsumer.this.props.put(&quot;value.deserializer&quot;, classOf[org.apache.kafka.common.serialization.StringDeserializer].getName())
+        </td>
+      </tr><tr>
+        <td>
+          20
+        </td>
+        <td>
+          13
+        </td>
+        <td>
+          707
+          -
+          742
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.lang.Class.getName
+        </td>
+        <td style="background: #AEF1AE">
+          classOf[org.apache.kafka.common.serialization.StringDeserializer].getName()
+        </td>
+      </tr><tr>
+        <td>
+          20
+        </td>
+        <td>
+          12
+        </td>
+        <td>
+          685
+          -
+          705
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;value.deserializer&quot;
+        </td>
+      </tr><tr>
+        <td>
+          21
+        </td>
+        <td>
+          15
+        </td>
+        <td>
+          746
+          -
+          780
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.util.Hashtable.put
+        </td>
+        <td style="background: #AEF1AE">
+          SimpleConsumer.this.props.put(&quot;max.poll.records&quot;, &quot;1&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          23
+        </td>
+        <td>
+          17
+        </td>
+        <td>
+          807
+          -
+          881
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          org.apache.kafka.clients.consumer.KafkaConsumer.&lt;init&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          new org.apache.kafka.clients.consumer.KafkaConsumer[String,String](SimpleConsumer.this.props)
+        </td>
+      </tr><tr>
+        <td>
+          23
+        </td>
+        <td>
+          16
+        </td>
+        <td>
+          875
+          -
+          880
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          com.skafka.example.SimpleConsumer.props
+        </td>
+        <td style="background: #AEF1AE">
+          SimpleConsumer.this.props
+        </td>
+      </tr><tr>
+        <td>
+          24
+        </td>
+        <td>
+          20
+        </td>
+        <td>
+          884
+          -
+          910
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          org.apache.kafka.clients.consumer.KafkaConsumer.subscribe
+        </td>
+        <td style="background: #AEF1AE">
+          SimpleConsumer.this.consumer.subscribe(scala.collection.JavaConversions.deprecated seqAsJavaList[String](SimpleConsumer.this.topic))
+        </td>
+      </tr><tr>
+        <td>
+          24
+        </td>
+        <td>
+          19
+        </td>
+        <td>
+          904
+          -
+          909
+        </td>
+        <td>
+          ApplyImplicitView
+        </td>
+        <td>
+          scala.collection.convert.WrapAsJava.deprecated seqAsJavaList
+        </td>
+        <td style="background: #AEF1AE">
+          scala.collection.JavaConversions.deprecated seqAsJavaList[String](SimpleConsumer.this.topic)
+        </td>
+      </tr><tr>
+        <td>
+          24
+        </td>
+        <td>
+          18
+        </td>
+        <td>
+          904
+          -
+          909
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          com.skafka.example.SimpleConsumer.topic
+        </td>
+        <td style="background: #AEF1AE">
+          SimpleConsumer.this.topic
+        </td>
+      </tr><tr>
+        <td>
+          26
+        </td>
+        <td>
+          28
+        </td>
+        <td>
+          970
+          -
+          1108
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          {
+  val records: org.apache.kafka.clients.consumer.ConsumerRecords[String,String] = SimpleConsumer.this.consumer.poll(SimpleConsumer.this.timeout);
+  scala.collection.JavaConversions.deprecated iterableAsScalaIterable[org.apache.kafka.clients.consumer.ConsumerRecord[String,String]](records).map[(String, String), Iterable[(String, String)]](((record: org.apache.kafka.clients.consumer.ConsumerRecord[String,String]) =&gt; scala.Tuple2.apply[String, String](record.topic(), record.value())))(collection.this.Iterable.canBuildFrom[(String, String)]).headOption
+}
+        </td>
+      </tr><tr>
+        <td>
+          27
+        </td>
+        <td>
+          22
+        </td>
+        <td>
+          1017
+          -
+          1039
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          org.apache.kafka.clients.consumer.KafkaConsumer.poll
+        </td>
+        <td style="background: #AEF1AE">
+          SimpleConsumer.this.consumer.poll(SimpleConsumer.this.timeout)
+        </td>
+      </tr><tr>
+        <td>
+          27
+        </td>
+        <td>
+          21
+        </td>
+        <td>
+          1031
+          -
+          1038
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          com.skafka.example.SimpleConsumer.timeout
+        </td>
+        <td style="background: #AEF1AE">
+          SimpleConsumer.this.timeout
+        </td>
+      </tr><tr>
+        <td>
+          28
+        </td>
+        <td>
+          23
+        </td>
+        <td>
+          1069
+          -
+          1081
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          org.apache.kafka.clients.consumer.ConsumerRecord.topic
+        </td>
+        <td style="background: #AEF1AE">
+          record.topic()
+        </td>
+      </tr><tr>
+        <td>
+          28
+        </td>
+        <td>
+          26
+        </td>
+        <td>
+          1057
+          -
+          1057
+        </td>
+        <td>
+          TypeApply
+        </td>
+        <td>
+          scala.collection.Iterable.canBuildFrom
+        </td>
+        <td style="background: #AEF1AE">
+          collection.this.Iterable.canBuildFrom[(String, String)]
+        </td>
+      </tr><tr>
+        <td>
+          28
+        </td>
+        <td>
+          25
+        </td>
+        <td>
+          1068
+          -
+          1096
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Tuple2.apply
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Tuple2.apply[String, String](record.topic(), record.value())
+        </td>
+      </tr><tr>
+        <td>
+          28
+        </td>
+        <td>
+          27
+        </td>
+        <td>
+          1046
+          -
+          1108
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.collection.TraversableLike.headOption
+        </td>
+        <td style="background: #AEF1AE">
+          scala.collection.JavaConversions.deprecated iterableAsScalaIterable[org.apache.kafka.clients.consumer.ConsumerRecord[String,String]](records).map[(String, String), Iterable[(String, String)]](((record: org.apache.kafka.clients.consumer.ConsumerRecord[String,String]) =&gt; scala.Tuple2.apply[String, String](record.topic(), record.value())))(collection.this.Iterable.canBuildFrom[(String, String)]).headOption
+        </td>
+      </tr><tr>
+        <td>
+          28
+        </td>
+        <td>
+          24
+        </td>
+        <td>
+          1083
+          -
+          1095
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          org.apache.kafka.clients.consumer.ConsumerRecord.value
+        </td>
+        <td style="background: #AEF1AE">
+          record.value()
+        </td>
+      </tr><tr>
+        <td>
+          32
+        </td>
+        <td>
+          29
+        </td>
+        <td>
+          1169
+          -
+          1218
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          org.slf4j.Logger.debug
+        </td>
+        <td style="background: #F0ADAD">
+          SimpleConsumer.this.logger.debug(&quot;Error in reading from kafka &quot;, wue)
+        </td>
+      </tr><tr>
+        <td>
+          33
+        </td>
+        <td>
+          30
+        </td>
+        <td>
+          1227
+          -
+          1231
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.None
+        </td>
+        <td style="background: #F0ADAD">
+          scala.None
+        </td>
+      </tr><tr>
+        <td>
+          35
+        </td>
+        <td>
+          31
+        </td>
+        <td>
+          1268
+          -
+          1316
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          org.slf4j.Logger.error
+        </td>
+        <td style="background: #AEF1AE">
+          SimpleConsumer.this.logger.error(&quot;Error in reading from kafka &quot;, ex)
+        </td>
+      </tr><tr>
+        <td>
+          36
+        </td>
+        <td>
+          32
+        </td>
+        <td>
+          1325
+          -
+          1329
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.None
+        </td>
+        <td style="background: #AEF1AE">
+          scala.None
+        </td>
+      </tr>
+    </table>
+          </div>
+        </div>
+      </body>
+    </html>

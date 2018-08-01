@@ -1,0 +1,4070 @@
+<html>
+      <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title id="title">
+          com/techsophy/training/Exercise.scala.html
+        </title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.20.1/css/theme.default.min.css" type="text/css"/><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.20.1/js/jquery.tablesorter.min.js"></script><link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" type="text/css"/><script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script><script type="text/javascript">
+        $(document).ready(function() {$(".tablesorter").tablesorter();});
+      </script>
+        <style>
+          table.codegrid { font-family: monospace; font-size: 12px; width: auto!important; }table.statementlist { width: auto!important; font-size: 13px; } table.codegrid td { padding: 0!important; border: 0!important } table td.linenumber { width: 40px!important; } 
+        </style>
+      </head>
+      <body style="font-family: monospace;">
+        <ul class="nav nav-tabs">
+          <li>
+            <a href="#codegrid" data-toggle="tab">Codegrid</a>
+          </li>
+          <li>
+            <a href="#statementlist" data-toggle="tab">Statement List</a>
+          </li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane active" id="codegrid">
+            <pre style='font-size: 12pt; font-family: courier;'>1 <span style=''>package com.techsophy.training
+</span>2 <span style=''>
+</span>3 <span style=''>import java.io.File
+</span>4 <span style=''>
+</span>5 <span style=''>import org.slf4j.LoggerFactory
+</span>6 <span style=''>
+</span>7 <span style=''>class Exercise {
+</span>8 <span style=''>
+</span>9 <span style=''>  val logger = </span><span style='background: #AEF1AE'>LoggerFactory.getLogger(this.getClass)</span><span style=''>
+</span>10 <span style=''>
+</span>11 <span style=''>
+</span>12 <span style=''>  def show(f: Int, n: Int): List[Int] = {
+</span>13 <span style=''>    val flattenList = </span><span style='background: #AEF1AE'>for (i &lt;- 1 to n) yield i</span><span style=''>
+</span>14 <span style=''>    val returnList = </span><span style='background: #AEF1AE'>flattenList flatMap { number: Int =&gt;
+</span>15 <span style=''></span><span style='background: #AEF1AE'>      fill(number)(f)</span><span style=''>
+</span>16 <span style=''>    }
+</span>17 <span style=''>    </span><span style='background: #AEF1AE'>returnList.toList</span><span style=''>
+</span>18 <span style=''>
+</span>19 <span style=''>  }
+</span>20 <span style=''>
+</span>21 <span style=''>  def fill(element: Int)(noOfTimes: Int): List[Int] = {
+</span>22 <span style=''>    if (</span><span style='background: #AEF1AE'>noOfTimes == 0</span><span style=''>) {
+</span>23 <span style=''>      </span><span style='background: #AEF1AE'>List()</span><span style=''>
+</span>24 <span style=''>    }
+</span>25 <span style=''>    else {
+</span>26 <span style=''>      </span><span style='background: #AEF1AE'>element :: fill(element)(noOfTimes - 1)</span><span style=''>
+</span>27 <span style=''>    }
+</span>28 <span style=''>  }
+</span>29 <span style=''>
+</span>30 <span style=''>  def reverse(list: List[Int]): List[Int] = {
+</span>31 <span style=''>    if (</span><span style='background: #AEF1AE'>list.isEmpty</span><span style=''>) {
+</span>32 <span style=''>      </span><span style='background: #AEF1AE'>List()</span><span style=''>
+</span>33 <span style=''>    }
+</span>34 <span style=''>    else {
+</span>35 <span style=''>      </span><span style='background: #AEF1AE'>reverse(list.tail) :+ list.head</span><span style=''>
+</span>36 <span style=''>    }
+</span>37 <span style=''>  }
+</span>38 <span style=''>
+</span>39 <span style=''>  def rotate(a: Array[Int], r: Int): Array[Int] = {
+</span>40 <span style=''>    var rList = </span><span style='background: #AEF1AE'>Array[Int]()</span><span style=''>
+</span>41 <span style=''>    </span><span style='background: #AEF1AE'>for (i &lt;- 1 to r) {
+</span>42 <span style=''></span><span style='background: #AEF1AE'>      if (i == 1) {
+</span>43 <span style=''></span><span style='background: #AEF1AE'>        rList = a.tail :+ a.head
+</span>44 <span style=''></span><span style='background: #AEF1AE'>      }
+</span>45 <span style=''></span><span style='background: #AEF1AE'>      else {
+</span>46 <span style=''></span><span style='background: #AEF1AE'>        rList = rList.tail :+ rList.head
+</span>47 <span style=''></span><span style='background: #AEF1AE'>      }</span><span style=''>
+</span>48 <span style=''>    }
+</span>49 <span style=''>    rList
+</span>50 <span style=''>  }
+</span>51 <span style=''>
+</span>52 <span style=''>  def sum(opt1: Option[Int], opt2: Option[Int]): Option[Int] = {
+</span>53 <span style=''>    if (</span><span style='background: #AEF1AE'>opt1.nonEmpty &amp;&amp; opt2.nonEmpty</span><span style=''>) {
+</span>54 <span style=''>      </span><span style='background: #AEF1AE'>Some(opt1.get + opt2.get)</span><span style=''>
+</span>55 <span style=''>    }
+</span>56 <span style=''>    else {
+</span>57 <span style=''>      </span><span style='background: #AEF1AE'>None</span><span style=''>
+</span>58 <span style=''>    }
+</span>59 <span style=''>  }
+</span>60 <span style=''>
+</span>61 <span style=''>  def concat(list1: List[Int], list2: List[Int]): List[Int] = {
+</span>62 <span style=''>    </span><span style='background: #AEF1AE'>list1.foldRight(list2) { (element, acc) =&gt; element :: acc }</span><span style=''>
+</span>63 <span style=''>  }
+</span>64 <span style=''>
+</span>65 <span style=''>  def wordCount(str: String): Map[String, Int] = {
+</span>66 <span style=''>    </span><span style='background: #AEF1AE'>str.split(&quot;\\s+&quot;).toList.groupBy(w =&gt; w).mapValues(_.length)</span><span style=''>
+</span>67 <span style=''>  }
+</span>68 <span style=''>
+</span>69 <span style=''>  def dedupe(list: List[Int]): List[Int] = {
+</span>70 <span style=''>    </span><span style='background: #AEF1AE'>list.foldRight(List(list.last))((element, result) =&gt; if (element == result.head) result else element :: result)</span><span style=''>
+</span>71 <span style=''>  }
+</span>72 <span style=''>
+</span>73 <span style=''>  def removeOdd(map: Map[String, Int]): Map[String, Int] = {
+</span>74 <span style=''>    </span><span style='background: #AEF1AE'>map.foldRight(Map[String, Int]())((element, result) =&gt; if (element._2 % 2 != 0) result else Map(result + element._1 -&gt; element._2))</span><span style=''>
+</span>75 <span style=''>  }
+</span>76 <span style=''>
+</span>77 <span style=''>  def concatenate(map1: Map[String, Int], map2: Map[String, Int]): Map[String, Int] = {
+</span>78 <span style=''>    val list = </span><span style='background: #AEF1AE'>map1.toList ++ map2.toList</span><span style=''>
+</span>79 <span style=''>    val merged = </span><span style='background: #AEF1AE'>list.groupBy(_._1).map { case (k, v) =&gt; k -&gt; v.map(_._2).sum }</span><span style=''>
+</span>80 <span style=''>    merged
+</span>81 <span style=''>  }
+</span>82 <span style=''>
+</span>83 <span style=''>  def removeKeys(keys: List[String], map: Map[String, Int]): Map[String, Int] = {
+</span>84 <span style=''>    var rMap = map
+</span>85 <span style=''>    </span><span style='background: #AEF1AE'>for (key &lt;- keys) {
+</span>86 <span style=''></span><span style='background: #AEF1AE'>      if (rMap.contains(key)) {
+</span>87 <span style=''></span><span style='background: #AEF1AE'>        rMap = rMap - key
+</span>88 <span style=''></span><span style='background: #AEF1AE'>      }</span><span style=''>
+</span>89 <span style=''>    }
+</span>90 <span style=''>    rMap
+</span>91 <span style=''>  }
+</span>92 <span style=''>
+</span>93 <span style=''>  def zip(list1: List[Int], list2: List[String]): List[(Int, String)] = {
+</span>94 <span style=''>    (list1, list2) match {
+</span>95 <span style=''>      case (Nil, _) =&gt; </span><span style='background: #AEF1AE'>Nil</span><span style=''>
+</span>96 <span style=''>      case (_, Nil) =&gt; </span><span style='background: #AEF1AE'>Nil</span><span style=''>
+</span>97 <span style=''>      case (x :: list1, y :: list2) =&gt; (x, y) </span><span style='background: #AEF1AE'>:: zip(list1, list2)</span><span style=''>
+</span>98 <span style=''>    }
+</span>99 <span style=''>
+</span>100 <span style=''>  }
+</span>101 <span style=''>
+</span>102 <span style=''>  def merge(list1: List[Int], list2: List[Int]): List[Int] = {
+</span>103 <span style=''>    (list1, list2) match {
+</span>104 <span style=''>      case (Nil, Nil) =&gt; </span><span style='background: #AEF1AE'>Nil</span><span style=''>
+</span>105 <span style=''>      case (Nil, ys) =&gt; ys
+</span>106 <span style=''>      case (xs, Nil) =&gt; xs
+</span>107 <span style=''>      case (x :: xs1, y :: ys1) =&gt;
+</span>108 <span style=''>        </span><span style='background: #AEF1AE'>logger.info(s&quot;x = $x ,$xs1 and y=$y ,  $ys1&quot;)</span><span style=''>
+</span>109 <span style=''>        if (</span><span style='background: #AEF1AE'>x &lt; y</span><span style=''>) {
+</span>110 <span style=''>          </span><span style='background: #AEF1AE'>x :: merge(xs1, list2)</span><span style=''>
+</span>111 <span style=''>        }
+</span>112 <span style=''>        else {
+</span>113 <span style=''>          </span><span style='background: #AEF1AE'>y :: merge(list1, ys1)</span><span style=''>
+</span>114 <span style=''>        }
+</span>115 <span style=''>    }
+</span>116 <span style=''>  }
+</span>117 <span style=''>
+</span>118 <span style=''>  def appraisal(employees: List[Employee]): List[Employee] = {
+</span>119 <span style=''>    var hra = </span><span style='background: #AEF1AE'>0</span><span style=''>
+</span>120 <span style=''>    </span><span style='background: #AEF1AE'>employees.map { emp =&gt;
+</span>121 <span style=''></span><span style='background: #AEF1AE'>      val salary1 = if (emp.age &gt; 50) {
+</span>122 <span style=''></span><span style='background: #AEF1AE'>        hra = 1
+</span>123 <span style=''></span><span style='background: #AEF1AE'>        emp.salary.hra + (0.2 * emp.salary.hra)
+</span>124 <span style=''></span><span style='background: #AEF1AE'>      }
+</span>125 <span style=''></span><span style='background: #AEF1AE'>      else {
+</span>126 <span style=''></span><span style='background: #AEF1AE'>        emp.salary.basic + (0.1 * emp.salary.basic)
+</span>127 <span style=''></span><span style='background: #AEF1AE'>      }
+</span>128 <span style=''></span><span style='background: #AEF1AE'>      if (hra == 1) {
+</span>129 <span style=''></span><span style='background: #AEF1AE'>        emp.copy(salary = Salary(emp.salary.basic, salary1, emp.salary.ta))
+</span>130 <span style=''></span><span style='background: #AEF1AE'>      }
+</span>131 <span style=''></span><span style='background: #AEF1AE'>      else {
+</span>132 <span style=''></span><span style='background: #AEF1AE'>        emp.copy(salary = Salary(salary1, emp.salary.hra, emp.salary.ta))
+</span>133 <span style=''></span><span style='background: #AEF1AE'>      }
+</span>134 <span style=''></span><span style='background: #AEF1AE'>    }</span><span style=''>
+</span>135 <span style=''>  }
+</span>136 <span style=''>
+</span>137 <span style=''>  def spiltByBranch(list: List[Student]): (List[Student], List[Student], List[Student], List[Student]) = {
+</span>138 <span style=''>    var a = </span><span style='background: #AEF1AE'>(List[Student](), List[Student](), List[Student](), List[Student]())</span><span style=''>
+</span>139 <span style=''>    </span><span style='background: #AEF1AE'>list.map { s =&gt;
+</span>140 <span style=''></span><span style='background: #AEF1AE'>      (s.branch) match {
+</span>141 <span style=''></span><span style='background: #AEF1AE'>        case &quot;CS&quot; =&gt; a = (a._1 :+ (s), a._2, a._3, a._4)
+</span>142 <span style=''></span><span style='background: #AEF1AE'>        case &quot;IT&quot; =&gt; a = (a._1, a._2 :+ (s), a._3, a._4)
+</span>143 <span style=''></span><span style='background: #AEF1AE'>        case &quot;EC&quot; =&gt; a = (a._1, a._2, a._3 :+ (s), a._4)
+</span>144 <span style=''></span><span style='background: #AEF1AE'>        case &quot;ME&quot; =&gt; a = (a._1, a._2, a._3, a._4 :+ (s))
+</span>145 <span style=''></span><span style='background: #AEF1AE'>      }
+</span>146 <span style=''></span><span style='background: #AEF1AE'>    }</span><span style=''>
+</span>147 <span style=''>    a
+</span>148 <span style=''>  }
+</span>149 <span style=''>
+</span>150 <span style=''>  def getCompanyValue(company: Company): Int = {
+</span>151 <span style=''>    val valuesList: List[Int] = </span><span style='background: #AEF1AE'>for {
+</span>152 <span style=''></span><span style='background: #AEF1AE'>      branch &lt;- company.branches
+</span>153 <span style=''></span><span style='background: #AEF1AE'>      consultant &lt;- branch.consultants
+</span>154 <span style=''></span><span style='background: #AEF1AE'>      customer &lt;- consultant.portfolio
+</span>155 <span style=''></span><span style='background: #AEF1AE'>    } yield customer.value</span><span style=''>
+</span>156 <span style=''>    </span><span style='background: #AEF1AE'>valuesList.foldLeft(0) { (acc, elem) =&gt; (acc + elem) }</span><span style=''>
+</span>157 <span style=''>  }
+</span>158 <span style=''>
+</span>159 <span style=''>  def countFiles(dir: String): Option[Int] = {
+</span>160 <span style=''>    val directory = </span><span style='background: #AEF1AE'>new File(dir)</span><span style=''>
+</span>161 <span style=''>    if (</span><span style='background: #AEF1AE'>directory.exists()</span><span style=''>) </span><span style='background: #AEF1AE'>{
+</span>162 <span style=''></span><span style='background: #AEF1AE'>      val list = directory.listFiles()
+</span>163 <span style=''></span><span style='background: #AEF1AE'>      if (list.length &gt; 0) {
+</span>164 <span style=''></span><span style='background: #AEF1AE'>        Some(list.length)
+</span>165 <span style=''></span><span style='background: #AEF1AE'>      }
+</span>166 <span style=''></span><span style='background: #AEF1AE'>      else {
+</span>167 <span style=''></span><span style='background: #AEF1AE'>        None
+</span>168 <span style=''></span><span style='background: #AEF1AE'>      }
+</span>169 <span style=''></span><span style='background: #AEF1AE'>    }</span><span style=''>
+</span>170 <span style=''>    else {
+</span>171 <span style=''>      </span><span style='background: #AEF1AE'>None</span><span style=''>
+</span>172 <span style=''>    }
+</span>173 <span style=''>  }
+</span>174 <span style=''>}
+</span>175 <span style=''>
+</span>176 <span style=''>case class Employee(id: Int, email: String, salary: Salary, age: Int)
+</span>177 <span style=''>
+</span>178 <span style=''>case class Salary(basic: Double, hra: Double, ta: Double)
+</span>179 <span style=''>
+</span>180 <span style=''>case class Student(id: Int, name: String, age: Int, branch: String)
+</span>181 <span style=''>
+</span>182 <span style=''>case class Customer(value: Int)
+</span>183 <span style=''>
+</span>184 <span style=''>case class Consultant(portfolio: List[Customer])
+</span>185 <span style=''>
+</span>186 <span style=''>case class Branch(consultants: List[Consultant])
+</span>187 <span style=''>
+</span>188 <span style=''>case class Company(branches: List[Branch])
+</span></pre>
+          </div>
+          <div class="tab-pane" id="statementlist">
+            <table cellspacing="0" cellpadding="0" class="table statementlist">
+      <tr>
+        <th>Line</th>
+        <th>Stmt Id</th>
+        <th>Pos</th>
+        <th>Tree</th>
+        <th>Symbol</th>
+        <th>Code</th>
+      </tr><tr>
+        <td>
+          9
+        </td>
+        <td>
+          56
+        </td>
+        <td>
+          118
+          -
+          156
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          org.slf4j.LoggerFactory.getLogger
+        </td>
+        <td style="background: #AEF1AE">
+          org.slf4j.LoggerFactory.getLogger(this.getClass())
+        </td>
+      </tr><tr>
+        <td>
+          9
+        </td>
+        <td>
+          55
+        </td>
+        <td>
+          142
+          -
+          155
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.lang.Object.getClass
+        </td>
+        <td style="background: #AEF1AE">
+          this.getClass()
+        </td>
+      </tr><tr>
+        <td>
+          13
+        </td>
+        <td>
+          59
+        </td>
+        <td>
+          223
+          -
+          248
+        </td>
+        <td>
+          ApplyToImplicitArgs
+        </td>
+        <td>
+          scala.collection.TraversableLike.map
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Predef.intWrapper(1).to(n).map[Int, scala.collection.immutable.IndexedSeq[Int]](((i: Int) =&gt; i))(immutable.this.IndexedSeq.canBuildFrom[Int])
+        </td>
+      </tr><tr>
+        <td>
+          13
+        </td>
+        <td>
+          58
+        </td>
+        <td>
+          230
+          -
+          230
+        </td>
+        <td>
+          TypeApply
+        </td>
+        <td>
+          scala.collection.immutable.IndexedSeq.canBuildFrom
+        </td>
+        <td style="background: #AEF1AE">
+          immutable.this.IndexedSeq.canBuildFrom[Int]
+        </td>
+      </tr><tr>
+        <td>
+          13
+        </td>
+        <td>
+          57
+        </td>
+        <td>
+          233
+          -
+          234
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          1
+        </td>
+      </tr><tr>
+        <td>
+          14
+        </td>
+        <td>
+          62
+        </td>
+        <td>
+          270
+          -
+          328
+        </td>
+        <td>
+          ApplyToImplicitArgs
+        </td>
+        <td>
+          scala.collection.TraversableLike.flatMap
+        </td>
+        <td style="background: #AEF1AE">
+          flattenList.flatMap[Int, scala.collection.immutable.IndexedSeq[Int]](((number: Int) =&gt; Exercise.this.fill(number)(f)))(immutable.this.IndexedSeq.canBuildFrom[Int])
+        </td>
+      </tr><tr>
+        <td>
+          14
+        </td>
+        <td>
+          61
+        </td>
+        <td>
+          282
+          -
+          282
+        </td>
+        <td>
+          TypeApply
+        </td>
+        <td>
+          scala.collection.immutable.IndexedSeq.canBuildFrom
+        </td>
+        <td style="background: #AEF1AE">
+          immutable.this.IndexedSeq.canBuildFrom[Int]
+        </td>
+      </tr><tr>
+        <td>
+          15
+        </td>
+        <td>
+          60
+        </td>
+        <td>
+          313
+          -
+          328
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          com.techsophy.training.Exercise.fill
+        </td>
+        <td style="background: #AEF1AE">
+          Exercise.this.fill(number)(f)
+        </td>
+      </tr><tr>
+        <td>
+          17
+        </td>
+        <td>
+          63
+        </td>
+        <td>
+          339
+          -
+          356
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.collection.TraversableOnce.toList
+        </td>
+        <td style="background: #AEF1AE">
+          returnList.toList
+        </td>
+      </tr><tr>
+        <td>
+          22
+        </td>
+        <td>
+          64
+        </td>
+        <td>
+          427
+          -
+          441
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Int.==
+        </td>
+        <td style="background: #AEF1AE">
+          noOfTimes.==(0)
+        </td>
+      </tr><tr>
+        <td>
+          23
+        </td>
+        <td>
+          65
+        </td>
+        <td>
+          451
+          -
+          457
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.collection.immutable.Nil
+        </td>
+        <td style="background: #AEF1AE">
+          scala.collection.immutable.Nil
+        </td>
+      </tr><tr>
+        <td>
+          23
+        </td>
+        <td>
+          66
+        </td>
+        <td>
+          451
+          -
+          457
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          scala.collection.immutable.Nil
+        </td>
+        <td style="background: #AEF1AE">
+          scala.collection.immutable.Nil
+        </td>
+      </tr><tr>
+        <td>
+          26
+        </td>
+        <td>
+          68
+        </td>
+        <td>
+          481
+          -
+          520
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          {
+  &lt;synthetic&gt; &lt;artifact&gt; val x$1: Int = element;
+  Exercise.this.fill(element)(noOfTimes.-(1)).::[Int](x$1)
+}
+        </td>
+      </tr><tr>
+        <td>
+          26
+        </td>
+        <td>
+          67
+        </td>
+        <td>
+          489
+          -
+          520
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.collection.immutable.List.::
+        </td>
+        <td style="background: #AEF1AE">
+          Exercise.this.fill(element)(noOfTimes.-(1)).::[Int](x$1)
+        </td>
+      </tr><tr>
+        <td>
+          31
+        </td>
+        <td>
+          69
+        </td>
+        <td>
+          586
+          -
+          598
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.collection.SeqLike.isEmpty
+        </td>
+        <td style="background: #AEF1AE">
+          list.isEmpty
+        </td>
+      </tr><tr>
+        <td>
+          32
+        </td>
+        <td>
+          71
+        </td>
+        <td>
+          608
+          -
+          614
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          scala.collection.immutable.Nil
+        </td>
+        <td style="background: #AEF1AE">
+          scala.collection.immutable.Nil
+        </td>
+      </tr><tr>
+        <td>
+          32
+        </td>
+        <td>
+          70
+        </td>
+        <td>
+          608
+          -
+          614
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.collection.immutable.Nil
+        </td>
+        <td style="background: #AEF1AE">
+          scala.collection.immutable.Nil
+        </td>
+      </tr><tr>
+        <td>
+          35
+        </td>
+        <td>
+          74
+        </td>
+        <td>
+          657
+          -
+          657
+        </td>
+        <td>
+          TypeApply
+        </td>
+        <td>
+          scala.collection.immutable.List.canBuildFrom
+        </td>
+        <td style="background: #AEF1AE">
+          immutable.this.List.canBuildFrom[Int]
+        </td>
+      </tr><tr>
+        <td>
+          35
+        </td>
+        <td>
+          73
+        </td>
+        <td>
+          660
+          -
+          669
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.collection.IterableLike.head
+        </td>
+        <td style="background: #AEF1AE">
+          list.head
+        </td>
+      </tr><tr>
+        <td>
+          35
+        </td>
+        <td>
+          76
+        </td>
+        <td>
+          638
+          -
+          669
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          scala.collection.SeqLike.:+
+        </td>
+        <td style="background: #AEF1AE">
+          Exercise.this.reverse(list.tail).:+[Int, List[Int]](list.head)(immutable.this.List.canBuildFrom[Int])
+        </td>
+      </tr><tr>
+        <td>
+          35
+        </td>
+        <td>
+          72
+        </td>
+        <td>
+          646
+          -
+          655
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.collection.TraversableLike.tail
+        </td>
+        <td style="background: #AEF1AE">
+          list.tail
+        </td>
+      </tr><tr>
+        <td>
+          35
+        </td>
+        <td>
+          75
+        </td>
+        <td>
+          638
+          -
+          669
+        </td>
+        <td>
+          ApplyToImplicitArgs
+        </td>
+        <td>
+          scala.collection.SeqLike.:+
+        </td>
+        <td style="background: #AEF1AE">
+          Exercise.this.reverse(list.tail).:+[Int, List[Int]](list.head)(immutable.this.List.canBuildFrom[Int])
+        </td>
+      </tr><tr>
+        <td>
+          40
+        </td>
+        <td>
+          77
+        </td>
+        <td>
+          749
+          -
+          761
+        </td>
+        <td>
+          ApplyToImplicitArgs
+        </td>
+        <td>
+          scala.Array.apply
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Array.apply[Int]()((ClassTag.Int: scala.reflect.ClassTag[Int]))
+        </td>
+      </tr><tr>
+        <td>
+          41
+        </td>
+        <td>
+          88
+        </td>
+        <td>
+          766
+          -
+          908
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.collection.immutable.Range.foreach
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Predef.intWrapper(1).to(r).foreach[Unit](((i: Int) =&gt; if (i.==(1))
+  rList = scala.Predef.intArrayOps(scala.Predef.intArrayOps(a).tail).:+[Int](scala.Predef.intArrayOps(a).head)((ClassTag.Int: scala.reflect.ClassTag[Int]))
+else
+  rList = scala.Predef.intArrayOps(scala.Predef.intArrayOps(rList).tail).:+[Int](scala.Predef.intArrayOps(rList).head)((ClassTag.Int: scala.reflect.ClassTag[Int]))))
+        </td>
+      </tr><tr>
+        <td>
+          41
+        </td>
+        <td>
+          78
+        </td>
+        <td>
+          776
+          -
+          777
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          1
+        </td>
+      </tr><tr>
+        <td>
+          42
+        </td>
+        <td>
+          79
+        </td>
+        <td>
+          796
+          -
+          802
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Int.==
+        </td>
+        <td style="background: #AEF1AE">
+          i.==(1)
+        </td>
+      </tr><tr>
+        <td>
+          43
+        </td>
+        <td>
+          83
+        </td>
+        <td>
+          814
+          -
+          838
+        </td>
+        <td>
+          Assign
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          rList = scala.Predef.intArrayOps(scala.Predef.intArrayOps(a).tail).:+[Int](scala.Predef.intArrayOps(a).head)((ClassTag.Int: scala.reflect.ClassTag[Int]))
+        </td>
+      </tr><tr>
+        <td>
+          43
+        </td>
+        <td>
+          80
+        </td>
+        <td>
+          822
+          -
+          828
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.collection.IndexedSeqOptimized.tail
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Predef.intArrayOps(a).tail
+        </td>
+      </tr><tr>
+        <td>
+          43
+        </td>
+        <td>
+          82
+        </td>
+        <td>
+          822
+          -
+          838
+        </td>
+        <td>
+          ApplyToImplicitArgs
+        </td>
+        <td>
+          scala.collection.mutable.ArrayOps.:+
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Predef.intArrayOps(scala.Predef.intArrayOps(a).tail).:+[Int](scala.Predef.intArrayOps(a).head)((ClassTag.Int: scala.reflect.ClassTag[Int]))
+        </td>
+      </tr><tr>
+        <td>
+          43
+        </td>
+        <td>
+          81
+        </td>
+        <td>
+          832
+          -
+          838
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.collection.IndexedSeqOptimized.head
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Predef.intArrayOps(a).head
+        </td>
+      </tr><tr>
+        <td>
+          46
+        </td>
+        <td>
+          86
+        </td>
+        <td>
+          876
+          -
+          900
+        </td>
+        <td>
+          ApplyToImplicitArgs
+        </td>
+        <td>
+          scala.collection.mutable.ArrayOps.:+
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Predef.intArrayOps(scala.Predef.intArrayOps(rList).tail).:+[Int](scala.Predef.intArrayOps(rList).head)((ClassTag.Int: scala.reflect.ClassTag[Int]))
+        </td>
+      </tr><tr>
+        <td>
+          46
+        </td>
+        <td>
+          85
+        </td>
+        <td>
+          890
+          -
+          900
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.collection.IndexedSeqOptimized.head
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Predef.intArrayOps(rList).head
+        </td>
+      </tr><tr>
+        <td>
+          46
+        </td>
+        <td>
+          87
+        </td>
+        <td>
+          868
+          -
+          900
+        </td>
+        <td>
+          Assign
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          rList = scala.Predef.intArrayOps(scala.Predef.intArrayOps(rList).tail).:+[Int](scala.Predef.intArrayOps(rList).head)((ClassTag.Int: scala.reflect.ClassTag[Int]))
+        </td>
+      </tr><tr>
+        <td>
+          46
+        </td>
+        <td>
+          84
+        </td>
+        <td>
+          876
+          -
+          886
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.collection.IndexedSeqOptimized.tail
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Predef.intArrayOps(rList).tail
+        </td>
+      </tr><tr>
+        <td>
+          53
+        </td>
+        <td>
+          89
+        </td>
+        <td>
+          1020
+          -
+          1033
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.Option.nonEmpty
+        </td>
+        <td style="background: #AEF1AE">
+          opt2.nonEmpty
+        </td>
+      </tr><tr>
+        <td>
+          53
+        </td>
+        <td>
+          90
+        </td>
+        <td>
+          1003
+          -
+          1033
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Boolean.&amp;&amp;
+        </td>
+        <td style="background: #AEF1AE">
+          opt1.nonEmpty.&amp;&amp;(opt2.nonEmpty)
+        </td>
+      </tr><tr>
+        <td>
+          54
+        </td>
+        <td>
+          92
+        </td>
+        <td>
+          1048
+          -
+          1067
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Int.+
+        </td>
+        <td style="background: #AEF1AE">
+          opt1.get.+(opt2.get)
+        </td>
+      </tr><tr>
+        <td>
+          54
+        </td>
+        <td>
+          91
+        </td>
+        <td>
+          1059
+          -
+          1067
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.Option.get
+        </td>
+        <td style="background: #AEF1AE">
+          opt2.get
+        </td>
+      </tr><tr>
+        <td>
+          54
+        </td>
+        <td>
+          94
+        </td>
+        <td>
+          1043
+          -
+          1068
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          scala.Some.apply
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Some.apply[Int](opt1.get.+(opt2.get))
+        </td>
+      </tr><tr>
+        <td>
+          54
+        </td>
+        <td>
+          93
+        </td>
+        <td>
+          1043
+          -
+          1068
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Some.apply
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Some.apply[Int](opt1.get.+(opt2.get))
+        </td>
+      </tr><tr>
+        <td>
+          57
+        </td>
+        <td>
+          95
+        </td>
+        <td>
+          1092
+          -
+          1096
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.None
+        </td>
+        <td style="background: #AEF1AE">
+          scala.None
+        </td>
+      </tr><tr>
+        <td>
+          57
+        </td>
+        <td>
+          96
+        </td>
+        <td>
+          1092
+          -
+          1096
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          scala.None
+        </td>
+        <td style="background: #AEF1AE">
+          scala.None
+        </td>
+      </tr><tr>
+        <td>
+          62
+        </td>
+        <td>
+          98
+        </td>
+        <td>
+          1176
+          -
+          1235
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.collection.immutable.List.foldRight
+        </td>
+        <td style="background: #AEF1AE">
+          list1.foldRight[List[Int]](list2)(((element: Int, acc: List[Int]) =&gt; {
+  &lt;synthetic&gt; &lt;artifact&gt; val x$2: Int = element;
+  acc.::[Int](x$2)
+}))
+        </td>
+      </tr><tr>
+        <td>
+          62
+        </td>
+        <td>
+          97
+        </td>
+        <td>
+          1227
+          -
+          1233
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.collection.immutable.List.::
+        </td>
+        <td style="background: #AEF1AE">
+          acc.::[Int](x$2)
+        </td>
+      </tr><tr>
+        <td>
+          66
+        </td>
+        <td>
+          101
+        </td>
+        <td>
+          1296
+          -
+          1356
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.collection.immutable.MapLike.mapValues
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Predef.refArrayOps[String](str.split(&quot;\\s+&quot;)).toList.groupBy[String](((w: String) =&gt; w)).mapValues[Int](((x$3: List[String]) =&gt; x$3.length))
+        </td>
+      </tr><tr>
+        <td>
+          66
+        </td>
+        <td>
+          100
+        </td>
+        <td>
+          1347
+          -
+          1355
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.collection.LinearSeqOptimized.length
+        </td>
+        <td style="background: #AEF1AE">
+          x$3.length
+        </td>
+      </tr><tr>
+        <td>
+          66
+        </td>
+        <td>
+          99
+        </td>
+        <td>
+          1296
+          -
+          1313
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.lang.String.split
+        </td>
+        <td style="background: #AEF1AE">
+          str.split(&quot;\\s+&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          70
+        </td>
+        <td>
+          104
+        </td>
+        <td>
+          1479
+          -
+          1490
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.collection.IterableLike.head
+        </td>
+        <td style="background: #AEF1AE">
+          result.head
+        </td>
+      </tr><tr>
+        <td>
+          70
+        </td>
+        <td>
+          107
+        </td>
+        <td>
+          1512
+          -
+          1521
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.collection.immutable.List.::
+        </td>
+        <td style="background: #AEF1AE">
+          result.::[Int](x$4)
+        </td>
+      </tr><tr>
+        <td>
+          70
+        </td>
+        <td>
+          106
+        </td>
+        <td>
+          1492
+          -
+          1498
+        </td>
+        <td>
+          Ident
+        </td>
+        <td>
+          com.techsophy.training.Exercise.result
+        </td>
+        <td style="background: #AEF1AE">
+          result
+        </td>
+      </tr><tr>
+        <td>
+          70
+        </td>
+        <td>
+          109
+        </td>
+        <td>
+          1411
+          -
+          1522
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.collection.immutable.List.foldRight
+        </td>
+        <td style="background: #AEF1AE">
+          list.foldRight[List[Int]](scala.collection.immutable.List.apply[Int](list.last))(((element: Int, result: List[Int]) =&gt; if (element.==(result.head))
+  result
+else
+  {
+    &lt;synthetic&gt; &lt;artifact&gt; val x$4: Int = element;
+    result.::[Int](x$4)
+  }))
+        </td>
+      </tr><tr>
+        <td>
+          70
+        </td>
+        <td>
+          103
+        </td>
+        <td>
+          1426
+          -
+          1441
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.collection.immutable.List.apply
+        </td>
+        <td style="background: #AEF1AE">
+          scala.collection.immutable.List.apply[Int](list.last)
+        </td>
+      </tr><tr>
+        <td>
+          70
+        </td>
+        <td>
+          105
+        </td>
+        <td>
+          1468
+          -
+          1490
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Int.==
+        </td>
+        <td style="background: #AEF1AE">
+          element.==(result.head)
+        </td>
+      </tr><tr>
+        <td>
+          70
+        </td>
+        <td>
+          108
+        </td>
+        <td>
+          1504
+          -
+          1521
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          {
+  &lt;synthetic&gt; &lt;artifact&gt; val x$4: Int = element;
+  result.::[Int](x$4)
+}
+        </td>
+      </tr><tr>
+        <td>
+          70
+        </td>
+        <td>
+          102
+        </td>
+        <td>
+          1431
+          -
+          1440
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.collection.LinearSeqOptimized.last
+        </td>
+        <td style="background: #AEF1AE">
+          list.last
+        </td>
+      </tr><tr>
+        <td>
+          74
+        </td>
+        <td>
+          110
+        </td>
+        <td>
+          1607
+          -
+          1625
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.collection.generic.GenMapFactory.apply
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Predef.Map.apply[String, Int]()
+        </td>
+      </tr><tr>
+        <td>
+          74
+        </td>
+        <td>
+          119
+        </td>
+        <td>
+          1593
+          -
+          1724
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.collection.IterableLike.foldRight
+        </td>
+        <td style="background: #AEF1AE">
+          map.foldRight[scala.collection.immutable.Map[String,Int]](scala.Predef.Map.apply[String, Int]())(((element: (String, Int), result: scala.collection.immutable.Map[String,Int]) =&gt; if (element._2.%(2).!=(0))
+  result
+else
+  scala.Predef.Map.apply[String, Int](scala.Predef.ArrowAssoc[String](scala.Predef.any2stringadd[scala.collection.immutable.Map[String,Int]](result).+(element._1)).-&gt;[Int](element._2))))
+        </td>
+      </tr><tr>
+        <td>
+          74
+        </td>
+        <td>
+          113
+        </td>
+        <td>
+          1698
+          -
+          1708
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.Tuple2._1
+        </td>
+        <td style="background: #AEF1AE">
+          element._1
+        </td>
+      </tr><tr>
+        <td>
+          74
+        </td>
+        <td>
+          116
+        </td>
+        <td>
+          1689
+          -
+          1722
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Predef.ArrowAssoc.-&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Predef.ArrowAssoc[String](scala.Predef.any2stringadd[scala.collection.immutable.Map[String,Int]](result).+(element._1)).-&gt;[Int](element._2)
+        </td>
+      </tr><tr>
+        <td>
+          74
+        </td>
+        <td>
+          115
+        </td>
+        <td>
+          1712
+          -
+          1722
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.Tuple2._2
+        </td>
+        <td style="background: #AEF1AE">
+          element._2
+        </td>
+      </tr><tr>
+        <td>
+          74
+        </td>
+        <td>
+          118
+        </td>
+        <td>
+          1685
+          -
+          1723
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          scala.collection.generic.GenMapFactory.apply
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Predef.Map.apply[String, Int](scala.Predef.ArrowAssoc[String](scala.Predef.any2stringadd[scala.collection.immutable.Map[String,Int]](result).+(element._1)).-&gt;[Int](element._2))
+        </td>
+      </tr><tr>
+        <td>
+          74
+        </td>
+        <td>
+          112
+        </td>
+        <td>
+          1673
+          -
+          1679
+        </td>
+        <td>
+          Ident
+        </td>
+        <td>
+          com.techsophy.training.Exercise.result
+        </td>
+        <td style="background: #AEF1AE">
+          result
+        </td>
+      </tr><tr>
+        <td>
+          74
+        </td>
+        <td>
+          114
+        </td>
+        <td>
+          1689
+          -
+          1708
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Predef.any2stringadd.+
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Predef.any2stringadd[scala.collection.immutable.Map[String,Int]](result).+(element._1)
+        </td>
+      </tr><tr>
+        <td>
+          74
+        </td>
+        <td>
+          117
+        </td>
+        <td>
+          1685
+          -
+          1723
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.collection.generic.GenMapFactory.apply
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Predef.Map.apply[String, Int](scala.Predef.ArrowAssoc[String](scala.Predef.any2stringadd[scala.collection.immutable.Map[String,Int]](result).+(element._1)).-&gt;[Int](element._2))
+        </td>
+      </tr><tr>
+        <td>
+          74
+        </td>
+        <td>
+          111
+        </td>
+        <td>
+          1652
+          -
+          1671
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Int.!=
+        </td>
+        <td style="background: #AEF1AE">
+          element._2.%(2).!=(0)
+        </td>
+      </tr><tr>
+        <td>
+          78
+        </td>
+        <td>
+          122
+        </td>
+        <td>
+          1833
+          -
+          1859
+        </td>
+        <td>
+          ApplyToImplicitArgs
+        </td>
+        <td>
+          scala.collection.immutable.List.++
+        </td>
+        <td style="background: #AEF1AE">
+          map1.toList.++[(String, Int), List[(String, Int)]](map2.toList)(immutable.this.List.canBuildFrom[(String, Int)])
+        </td>
+      </tr><tr>
+        <td>
+          78
+        </td>
+        <td>
+          121
+        </td>
+        <td>
+          1845
+          -
+          1845
+        </td>
+        <td>
+          TypeApply
+        </td>
+        <td>
+          scala.collection.immutable.List.canBuildFrom
+        </td>
+        <td style="background: #AEF1AE">
+          immutable.this.List.canBuildFrom[(String, Int)]
+        </td>
+      </tr><tr>
+        <td>
+          78
+        </td>
+        <td>
+          120
+        </td>
+        <td>
+          1848
+          -
+          1859
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.collection.TraversableOnce.toList
+        </td>
+        <td style="background: #AEF1AE">
+          map2.toList
+        </td>
+      </tr><tr>
+        <td>
+          79
+        </td>
+        <td>
+          128
+        </td>
+        <td>
+          1917
+          -
+          1937
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Predef.ArrowAssoc.-&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Predef.ArrowAssoc[String](k).-&gt;[Int](v.map[Int, List[Int]](((x$6: (String, Int)) =&gt; x$6._2))(immutable.this.List.canBuildFrom[Int]).sum[Int](math.this.Numeric.IntIsIntegral))
+        </td>
+      </tr><tr>
+        <td>
+          79
+        </td>
+        <td>
+          125
+        </td>
+        <td>
+          1927
+          -
+          1927
+        </td>
+        <td>
+          TypeApply
+        </td>
+        <td>
+          scala.collection.immutable.List.canBuildFrom
+        </td>
+        <td style="background: #AEF1AE">
+          immutable.this.List.canBuildFrom[Int]
+        </td>
+      </tr><tr>
+        <td>
+          79
+        </td>
+        <td>
+          124
+        </td>
+        <td>
+          1928
+          -
+          1932
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.Tuple2._2
+        </td>
+        <td style="background: #AEF1AE">
+          x$6._2
+        </td>
+      </tr><tr>
+        <td>
+          79
+        </td>
+        <td>
+          127
+        </td>
+        <td>
+          1922
+          -
+          1937
+        </td>
+        <td>
+          ApplyToImplicitArgs
+        </td>
+        <td>
+          scala.collection.TraversableOnce.sum
+        </td>
+        <td style="background: #AEF1AE">
+          v.map[Int, List[Int]](((x$6: (String, Int)) =&gt; x$6._2))(immutable.this.List.canBuildFrom[Int]).sum[Int](math.this.Numeric.IntIsIntegral)
+        </td>
+      </tr><tr>
+        <td>
+          79
+        </td>
+        <td>
+          130
+        </td>
+        <td>
+          1877
+          -
+          1939
+        </td>
+        <td>
+          ApplyToImplicitArgs
+        </td>
+        <td>
+          scala.collection.TraversableLike.map
+        </td>
+        <td style="background: #AEF1AE">
+          list.groupBy[String](((x$5: (String, Int)) =&gt; x$5._1)).map[(String, Int), scala.collection.immutable.Map[String,Int]](((x0$1: (String, List[(String, Int)])) =&gt; x0$1 match {
+  case (_1: String, _2: List[(String, Int)])(String, List[(String, Int)])((k @ _), (v @ _)) =&gt; scala.Predef.ArrowAssoc[String](k).-&gt;[Int](v.map[Int, List[Int]](((x$6: (String, Int)) =&gt; x$6._2))(immutable.this.List.canBuildFrom[Int]).sum[Int](math.this.Numeric.IntIsIntegral))
+}))(immutable.this.Map.canBuildFrom[String, Int])
+        </td>
+      </tr><tr>
+        <td>
+          79
+        </td>
+        <td>
+          129
+        </td>
+        <td>
+          1900
+          -
+          1900
+        </td>
+        <td>
+          TypeApply
+        </td>
+        <td>
+          scala.collection.immutable.Map.canBuildFrom
+        </td>
+        <td style="background: #AEF1AE">
+          immutable.this.Map.canBuildFrom[String, Int]
+        </td>
+      </tr><tr>
+        <td>
+          79
+        </td>
+        <td>
+          123
+        </td>
+        <td>
+          1890
+          -
+          1894
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.Tuple2._1
+        </td>
+        <td style="background: #AEF1AE">
+          x$5._1
+        </td>
+      </tr><tr>
+        <td>
+          79
+        </td>
+        <td>
+          126
+        </td>
+        <td>
+          1934
+          -
+          1934
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.math.Numeric.IntIsIntegral
+        </td>
+        <td style="background: #AEF1AE">
+          math.this.Numeric.IntIsIntegral
+        </td>
+      </tr><tr>
+        <td>
+          85
+        </td>
+        <td>
+          136
+        </td>
+        <td>
+          2061
+          -
+          2146
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.collection.immutable.List.foreach
+        </td>
+        <td style="background: #AEF1AE">
+          keys.foreach[Unit](((key: String) =&gt; if (rMap.contains(key))
+  rMap = rMap.-(key)
+else
+  ()))
+        </td>
+      </tr><tr>
+        <td>
+          86
+        </td>
+        <td>
+          131
+        </td>
+        <td>
+          2091
+          -
+          2109
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.collection.MapLike.contains
+        </td>
+        <td style="background: #AEF1AE">
+          rMap.contains(key)
+        </td>
+      </tr><tr>
+        <td>
+          86
+        </td>
+        <td>
+          134
+        </td>
+        <td>
+          2087
+          -
+          2087
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #F0ADAD">
+          ()
+        </td>
+      </tr><tr>
+        <td>
+          86
+        </td>
+        <td>
+          135
+        </td>
+        <td>
+          2087
+          -
+          2087
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #F0ADAD">
+          ()
+        </td>
+      </tr><tr>
+        <td>
+          87
+        </td>
+        <td>
+          133
+        </td>
+        <td>
+          2121
+          -
+          2138
+        </td>
+        <td>
+          Assign
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          rMap = rMap.-(key)
+        </td>
+      </tr><tr>
+        <td>
+          87
+        </td>
+        <td>
+          132
+        </td>
+        <td>
+          2128
+          -
+          2138
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.collection.MapLike.-
+        </td>
+        <td style="background: #AEF1AE">
+          rMap.-(key)
+        </td>
+      </tr><tr>
+        <td>
+          95
+        </td>
+        <td>
+          137
+        </td>
+        <td>
+          2291
+          -
+          2294
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.collection.immutable.Nil
+        </td>
+        <td style="background: #AEF1AE">
+          scala.collection.immutable.Nil
+        </td>
+      </tr><tr>
+        <td>
+          96
+        </td>
+        <td>
+          138
+        </td>
+        <td>
+          2318
+          -
+          2321
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.collection.immutable.Nil
+        </td>
+        <td style="background: #AEF1AE">
+          scala.collection.immutable.Nil
+        </td>
+      </tr><tr>
+        <td>
+          97
+        </td>
+        <td>
+          139
+        </td>
+        <td>
+          2368
+          -
+          2388
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.collection.immutable.List.::
+        </td>
+        <td style="background: #AEF1AE">
+          Exercise.this.zip(list1, list2).::[(Int, String)](x$7)
+        </td>
+      </tr><tr>
+        <td>
+          104
+        </td>
+        <td>
+          140
+        </td>
+        <td>
+          2516
+          -
+          2519
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.collection.immutable.Nil
+        </td>
+        <td style="background: #AEF1AE">
+          scala.collection.immutable.Nil
+        </td>
+      </tr><tr>
+        <td>
+          108
+        </td>
+        <td>
+          142
+        </td>
+        <td>
+          2617
+          -
+          2662
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          org.slf4j.Logger.info
+        </td>
+        <td style="background: #AEF1AE">
+          Exercise.this.logger.info(scala.StringContext.apply(&quot;x = &quot;, &quot; ,&quot;, &quot; and y=&quot;, &quot; ,  &quot;, &quot;&quot;).s(x, xs1, y, ys1))
+        </td>
+      </tr><tr>
+        <td>
+          108
+        </td>
+        <td>
+          141
+        </td>
+        <td>
+          2629
+          -
+          2661
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.StringContext.s
+        </td>
+        <td style="background: #AEF1AE">
+          scala.StringContext.apply(&quot;x = &quot;, &quot; ,&quot;, &quot; and y=&quot;, &quot; ,  &quot;, &quot;&quot;).s(x, xs1, y, ys1)
+        </td>
+      </tr><tr>
+        <td>
+          109
+        </td>
+        <td>
+          143
+        </td>
+        <td>
+          2675
+          -
+          2680
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Int.&lt;
+        </td>
+        <td style="background: #AEF1AE">
+          x.&lt;(y)
+        </td>
+      </tr><tr>
+        <td>
+          110
+        </td>
+        <td>
+          145
+        </td>
+        <td>
+          2694
+          -
+          2716
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          {
+  &lt;synthetic&gt; &lt;artifact&gt; val x$8: Int = x;
+  Exercise.this.merge(xs1, list2).::[Int](x$8)
+}
+        </td>
+      </tr><tr>
+        <td>
+          110
+        </td>
+        <td>
+          144
+        </td>
+        <td>
+          2696
+          -
+          2716
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.collection.immutable.List.::
+        </td>
+        <td style="background: #AEF1AE">
+          Exercise.this.merge(xs1, list2).::[Int](x$8)
+        </td>
+      </tr><tr>
+        <td>
+          113
+        </td>
+        <td>
+          146
+        </td>
+        <td>
+          2754
+          -
+          2774
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.collection.immutable.List.::
+        </td>
+        <td style="background: #AEF1AE">
+          Exercise.this.merge(list1, ys1).::[Int](x$9)
+        </td>
+      </tr><tr>
+        <td>
+          113
+        </td>
+        <td>
+          147
+        </td>
+        <td>
+          2752
+          -
+          2774
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          {
+  &lt;synthetic&gt; &lt;artifact&gt; val x$9: Int = y;
+  Exercise.this.merge(list1, ys1).::[Int](x$9)
+}
+        </td>
+      </tr><tr>
+        <td>
+          119
+        </td>
+        <td>
+          148
+        </td>
+        <td>
+          2873
+          -
+          2874
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          0
+        </td>
+      </tr><tr>
+        <td>
+          120
+        </td>
+        <td>
+          178
+        </td>
+        <td>
+          2893
+          -
+          2893
+        </td>
+        <td>
+          TypeApply
+        </td>
+        <td>
+          scala.collection.immutable.List.canBuildFrom
+        </td>
+        <td style="background: #AEF1AE">
+          immutable.this.List.canBuildFrom[com.techsophy.training.Employee]
+        </td>
+      </tr><tr>
+        <td>
+          120
+        </td>
+        <td>
+          179
+        </td>
+        <td>
+          2879
+          -
+          3293
+        </td>
+        <td>
+          ApplyToImplicitArgs
+        </td>
+        <td>
+          scala.collection.immutable.List.map
+        </td>
+        <td style="background: #AEF1AE">
+          employees.map[com.techsophy.training.Employee, List[com.techsophy.training.Employee]](((emp: com.techsophy.training.Employee) =&gt; {
+  val salary1: Double = if (emp.age.&gt;(50))
+    {
+      hra = 1;
+      emp.salary.hra.+(0.2.*(emp.salary.hra))
+    }
+  else
+    emp.salary.basic.+(0.1.*(emp.salary.basic));
+  if (hra.==(1))
+    {
+      &lt;artifact&gt; val x$10: com.techsophy.training.Salary = Salary.apply(emp.salary.basic, salary1, emp.salary.ta);
+      &lt;artifact&gt; val x$11: Int = emp.copy$default$1;
+      &lt;artifact&gt; val x$12: String = emp.copy$default$2;
+      &lt;artifact&gt; val x$13: Int = emp.copy$default$4;
+      emp.copy(x$11, x$12, x$10, x$13)
+    }
+  else
+    {
+      &lt;artifact&gt; val x$14: com.techsophy.training.Salary = Salary.apply(salary1, emp.salary.hra, emp.salary.ta);
+      &lt;artifact&gt; val x$15: Int = emp.copy$default$1;
+      &lt;artifact&gt; val x$16: String = emp.copy$default$2;
+      &lt;artifact&gt; val x$17: Int = emp.copy$default$4;
+      emp.copy(x$15, x$16, x$14, x$17)
+    }
+}))(immutable.this.List.canBuildFrom[com.techsophy.training.Employee])
+        </td>
+      </tr><tr>
+        <td>
+          121
+        </td>
+        <td>
+          155
+        </td>
+        <td>
+          2940
+          -
+          3013
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          {
+  hra = 1;
+  emp.salary.hra.+(0.2.*(emp.salary.hra))
+}
+        </td>
+      </tr><tr>
+        <td>
+          121
+        </td>
+        <td>
+          149
+        </td>
+        <td>
+          2926
+          -
+          2938
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Int.&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          emp.age.&gt;(50)
+        </td>
+      </tr><tr>
+        <td>
+          122
+        </td>
+        <td>
+          150
+        </td>
+        <td>
+          2956
+          -
+          2957
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          1
+        </td>
+      </tr><tr>
+        <td>
+          123
+        </td>
+        <td>
+          151
+        </td>
+        <td>
+          2984
+          -
+          2987
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          0.2
+        </td>
+      </tr><tr>
+        <td>
+          123
+        </td>
+        <td>
+          154
+        </td>
+        <td>
+          2966
+          -
+          3005
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Double.+
+        </td>
+        <td style="background: #AEF1AE">
+          emp.salary.hra.+(0.2.*(emp.salary.hra))
+        </td>
+      </tr><tr>
+        <td>
+          123
+        </td>
+        <td>
+          153
+        </td>
+        <td>
+          2984
+          -
+          3004
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Double.*
+        </td>
+        <td style="background: #AEF1AE">
+          0.2.*(emp.salary.hra)
+        </td>
+      </tr><tr>
+        <td>
+          123
+        </td>
+        <td>
+          152
+        </td>
+        <td>
+          2990
+          -
+          3004
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          com.techsophy.training.Salary.hra
+        </td>
+        <td style="background: #AEF1AE">
+          emp.salary.hra
+        </td>
+      </tr><tr>
+        <td>
+          126
+        </td>
+        <td>
+          158
+        </td>
+        <td>
+          3055
+          -
+          3077
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Double.*
+        </td>
+        <td style="background: #AEF1AE">
+          0.1.*(emp.salary.basic)
+        </td>
+      </tr><tr>
+        <td>
+          126
+        </td>
+        <td>
+          160
+        </td>
+        <td>
+          3035
+          -
+          3078
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          scala.Double.+
+        </td>
+        <td style="background: #AEF1AE">
+          emp.salary.basic.+(0.1.*(emp.salary.basic))
+        </td>
+      </tr><tr>
+        <td>
+          126
+        </td>
+        <td>
+          157
+        </td>
+        <td>
+          3061
+          -
+          3077
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          com.techsophy.training.Salary.basic
+        </td>
+        <td style="background: #AEF1AE">
+          emp.salary.basic
+        </td>
+      </tr><tr>
+        <td>
+          126
+        </td>
+        <td>
+          156
+        </td>
+        <td>
+          3055
+          -
+          3058
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          0.1
+        </td>
+      </tr><tr>
+        <td>
+          126
+        </td>
+        <td>
+          159
+        </td>
+        <td>
+          3035
+          -
+          3078
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Double.+
+        </td>
+        <td style="background: #AEF1AE">
+          emp.salary.basic.+(0.1.*(emp.salary.basic))
+        </td>
+      </tr><tr>
+        <td>
+          128
+        </td>
+        <td>
+          161
+        </td>
+        <td>
+          3097
+          -
+          3105
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Int.==
+        </td>
+        <td style="background: #AEF1AE">
+          hra.==(1)
+        </td>
+      </tr><tr>
+        <td>
+          129
+        </td>
+        <td>
+          164
+        </td>
+        <td>
+          3135
+          -
+          3183
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          com.techsophy.training.Salary.apply
+        </td>
+        <td style="background: #AEF1AE">
+          Salary.apply(emp.salary.basic, salary1, emp.salary.ta)
+        </td>
+      </tr><tr>
+        <td>
+          129
+        </td>
+        <td>
+          167
+        </td>
+        <td>
+          3121
+          -
+          3121
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          com.techsophy.training.Employee.copy$default$4
+        </td>
+        <td style="background: #AEF1AE">
+          emp.copy$default$4
+        </td>
+      </tr><tr>
+        <td>
+          129
+        </td>
+        <td>
+          166
+        </td>
+        <td>
+          3121
+          -
+          3121
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          com.techsophy.training.Employee.copy$default$2
+        </td>
+        <td style="background: #AEF1AE">
+          emp.copy$default$2
+        </td>
+      </tr><tr>
+        <td>
+          129
+        </td>
+        <td>
+          169
+        </td>
+        <td>
+          3117
+          -
+          3184
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          {
+  &lt;artifact&gt; val x$10: com.techsophy.training.Salary = Salary.apply(emp.salary.basic, salary1, emp.salary.ta);
+  &lt;artifact&gt; val x$11: Int = emp.copy$default$1;
+  &lt;artifact&gt; val x$12: String = emp.copy$default$2;
+  &lt;artifact&gt; val x$13: Int = emp.copy$default$4;
+  emp.copy(x$11, x$12, x$10, x$13)
+}
+        </td>
+      </tr><tr>
+        <td>
+          129
+        </td>
+        <td>
+          163
+        </td>
+        <td>
+          3169
+          -
+          3182
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          com.techsophy.training.Salary.ta
+        </td>
+        <td style="background: #AEF1AE">
+          emp.salary.ta
+        </td>
+      </tr><tr>
+        <td>
+          129
+        </td>
+        <td>
+          165
+        </td>
+        <td>
+          3121
+          -
+          3121
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          com.techsophy.training.Employee.copy$default$1
+        </td>
+        <td style="background: #AEF1AE">
+          emp.copy$default$1
+        </td>
+      </tr><tr>
+        <td>
+          129
+        </td>
+        <td>
+          168
+        </td>
+        <td>
+          3117
+          -
+          3184
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          com.techsophy.training.Employee.copy
+        </td>
+        <td style="background: #AEF1AE">
+          emp.copy(x$11, x$12, x$10, x$13)
+        </td>
+      </tr><tr>
+        <td>
+          129
+        </td>
+        <td>
+          162
+        </td>
+        <td>
+          3142
+          -
+          3158
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          com.techsophy.training.Salary.basic
+        </td>
+        <td style="background: #AEF1AE">
+          emp.salary.basic
+        </td>
+      </tr><tr>
+        <td>
+          132
+        </td>
+        <td>
+          173
+        </td>
+        <td>
+          3218
+          -
+          3218
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          com.techsophy.training.Employee.copy$default$1
+        </td>
+        <td style="background: #AEF1AE">
+          emp.copy$default$1
+        </td>
+      </tr><tr>
+        <td>
+          132
+        </td>
+        <td>
+          176
+        </td>
+        <td>
+          3214
+          -
+          3279
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          com.techsophy.training.Employee.copy
+        </td>
+        <td style="background: #AEF1AE">
+          emp.copy(x$15, x$16, x$14, x$17)
+        </td>
+      </tr><tr>
+        <td>
+          132
+        </td>
+        <td>
+          175
+        </td>
+        <td>
+          3218
+          -
+          3218
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          com.techsophy.training.Employee.copy$default$4
+        </td>
+        <td style="background: #AEF1AE">
+          emp.copy$default$4
+        </td>
+      </tr><tr>
+        <td>
+          132
+        </td>
+        <td>
+          172
+        </td>
+        <td>
+          3232
+          -
+          3278
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          com.techsophy.training.Salary.apply
+        </td>
+        <td style="background: #AEF1AE">
+          Salary.apply(salary1, emp.salary.hra, emp.salary.ta)
+        </td>
+      </tr><tr>
+        <td>
+          132
+        </td>
+        <td>
+          174
+        </td>
+        <td>
+          3218
+          -
+          3218
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          com.techsophy.training.Employee.copy$default$2
+        </td>
+        <td style="background: #AEF1AE">
+          emp.copy$default$2
+        </td>
+      </tr><tr>
+        <td>
+          132
+        </td>
+        <td>
+          177
+        </td>
+        <td>
+          3214
+          -
+          3279
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          {
+  &lt;artifact&gt; val x$14: com.techsophy.training.Salary = Salary.apply(salary1, emp.salary.hra, emp.salary.ta);
+  &lt;artifact&gt; val x$15: Int = emp.copy$default$1;
+  &lt;artifact&gt; val x$16: String = emp.copy$default$2;
+  &lt;artifact&gt; val x$17: Int = emp.copy$default$4;
+  emp.copy(x$15, x$16, x$14, x$17)
+}
+        </td>
+      </tr><tr>
+        <td>
+          132
+        </td>
+        <td>
+          171
+        </td>
+        <td>
+          3264
+          -
+          3277
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          com.techsophy.training.Salary.ta
+        </td>
+        <td style="background: #AEF1AE">
+          emp.salary.ta
+        </td>
+      </tr><tr>
+        <td>
+          132
+        </td>
+        <td>
+          170
+        </td>
+        <td>
+          3248
+          -
+          3262
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          com.techsophy.training.Salary.hra
+        </td>
+        <td style="background: #AEF1AE">
+          emp.salary.hra
+        </td>
+      </tr><tr>
+        <td>
+          138
+        </td>
+        <td>
+          182
+        </td>
+        <td>
+          3453
+          -
+          3468
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.collection.immutable.Nil
+        </td>
+        <td style="background: #AEF1AE">
+          scala.collection.immutable.Nil
+        </td>
+      </tr><tr>
+        <td>
+          138
+        </td>
+        <td>
+          184
+        </td>
+        <td>
+          3418
+          -
+          3486
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Tuple4.apply
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Tuple4.apply[List[com.techsophy.training.Student], List[com.techsophy.training.Student], List[com.techsophy.training.Student], List[com.techsophy.training.Student]](scala.collection.immutable.Nil, scala.collection.immutable.Nil, scala.collection.immutable.Nil, scala.collection.immutable.Nil)
+        </td>
+      </tr><tr>
+        <td>
+          138
+        </td>
+        <td>
+          181
+        </td>
+        <td>
+          3436
+          -
+          3451
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.collection.immutable.Nil
+        </td>
+        <td style="background: #AEF1AE">
+          scala.collection.immutable.Nil
+        </td>
+      </tr><tr>
+        <td>
+          138
+        </td>
+        <td>
+          180
+        </td>
+        <td>
+          3419
+          -
+          3434
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.collection.immutable.Nil
+        </td>
+        <td style="background: #AEF1AE">
+          scala.collection.immutable.Nil
+        </td>
+      </tr><tr>
+        <td>
+          138
+        </td>
+        <td>
+          183
+        </td>
+        <td>
+          3470
+          -
+          3485
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.collection.immutable.Nil
+        </td>
+        <td style="background: #AEF1AE">
+          scala.collection.immutable.Nil
+        </td>
+      </tr><tr>
+        <td>
+          139
+        </td>
+        <td>
+          211
+        </td>
+        <td>
+          3491
+          -
+          3773
+        </td>
+        <td>
+          ApplyToImplicitArgs
+        </td>
+        <td>
+          scala.collection.immutable.List.map
+        </td>
+        <td style="background: #AEF1AE">
+          list.map[Unit, List[Unit]](((s: com.techsophy.training.Student) =&gt; s.branch match {
+  case &quot;CS&quot; =&gt; a = scala.Tuple4.apply[List[com.techsophy.training.Student], List[com.techsophy.training.Student], List[com.techsophy.training.Student], List[com.techsophy.training.Student]](a._1.:+[com.techsophy.training.Student, List[com.techsophy.training.Student]](s)(immutable.this.List.canBuildFrom[com.techsophy.training.Student]), a._2, a._3, a._4)
+  case &quot;IT&quot; =&gt; a = scala.Tuple4.apply[List[com.techsophy.training.Student], List[com.techsophy.training.Student], List[com.techsophy.training.Student], List[com.techsophy.training.Student]](a._1, a._2.:+[com.techsophy.training.Student, List[com.techsophy.training.Student]](s)(immutable.this.List.canBuildFrom[com.techsophy.training.Student]), a._3, a._4)
+  case &quot;EC&quot; =&gt; a = scala.Tuple4.apply[List[com.techsophy.training.Student], List[com.techsophy.training.Student], List[com.techsophy.training.Student], List[com.techsophy.training.Student]](a._1, a._2, a._3.:+[com.techsophy.training.Student, List[com.techsophy.training.Student]](s)(immutable.this.List.canBuildFrom[com.techsophy.training.Student]), a._4)
+  case &quot;ME&quot; =&gt; a = scala.Tuple4.apply[List[com.techsophy.training.Student], List[com.techsophy.training.Student], List[com.techsophy.training.Student], List[com.techsophy.training.Student]](a._1, a._2, a._3, a._4.:+[com.techsophy.training.Student, List[com.techsophy.training.Student]](s)(immutable.this.List.canBuildFrom[com.techsophy.training.Student]))
+}))(immutable.this.List.canBuildFrom[Unit])
+        </td>
+      </tr><tr>
+        <td>
+          139
+        </td>
+        <td>
+          210
+        </td>
+        <td>
+          3500
+          -
+          3500
+        </td>
+        <td>
+          TypeApply
+        </td>
+        <td>
+          scala.collection.immutable.List.canBuildFrom
+        </td>
+        <td style="background: #AEF1AE">
+          immutable.this.List.canBuildFrom[Unit]
+        </td>
+      </tr><tr>
+        <td>
+          140
+        </td>
+        <td>
+          185
+        </td>
+        <td>
+          3514
+          -
+          3522
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          com.techsophy.training.Student.branch
+        </td>
+        <td style="background: #AEF1AE">
+          s.branch
+        </td>
+      </tr><tr>
+        <td>
+          141
+        </td>
+        <td>
+          191
+        </td>
+        <td>
+          3557
+          -
+          3588
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Tuple4.apply
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Tuple4.apply[List[com.techsophy.training.Student], List[com.techsophy.training.Student], List[com.techsophy.training.Student], List[com.techsophy.training.Student]](a._1.:+[com.techsophy.training.Student, List[com.techsophy.training.Student]](s)(immutable.this.List.canBuildFrom[com.techsophy.training.Student]), a._2, a._3, a._4)
+        </td>
+      </tr><tr>
+        <td>
+          141
+        </td>
+        <td>
+          187
+        </td>
+        <td>
+          3558
+          -
+          3569
+        </td>
+        <td>
+          ApplyToImplicitArgs
+        </td>
+        <td>
+          scala.collection.SeqLike.:+
+        </td>
+        <td style="background: #AEF1AE">
+          a._1.:+[com.techsophy.training.Student, List[com.techsophy.training.Student]](s)(immutable.this.List.canBuildFrom[com.techsophy.training.Student])
+        </td>
+      </tr><tr>
+        <td>
+          141
+        </td>
+        <td>
+          190
+        </td>
+        <td>
+          3583
+          -
+          3587
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.Tuple4._4
+        </td>
+        <td style="background: #AEF1AE">
+          a._4
+        </td>
+      </tr><tr>
+        <td>
+          141
+        </td>
+        <td>
+          189
+        </td>
+        <td>
+          3577
+          -
+          3581
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.Tuple4._3
+        </td>
+        <td style="background: #AEF1AE">
+          a._3
+        </td>
+      </tr><tr>
+        <td>
+          141
+        </td>
+        <td>
+          186
+        </td>
+        <td>
+          3563
+          -
+          3563
+        </td>
+        <td>
+          TypeApply
+        </td>
+        <td>
+          scala.collection.immutable.List.canBuildFrom
+        </td>
+        <td style="background: #AEF1AE">
+          immutable.this.List.canBuildFrom[com.techsophy.training.Student]
+        </td>
+      </tr><tr>
+        <td>
+          141
+        </td>
+        <td>
+          188
+        </td>
+        <td>
+          3571
+          -
+          3575
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.Tuple4._2
+        </td>
+        <td style="background: #AEF1AE">
+          a._2
+        </td>
+      </tr><tr>
+        <td>
+          142
+        </td>
+        <td>
+          194
+        </td>
+        <td>
+          3621
+          -
+          3632
+        </td>
+        <td>
+          ApplyToImplicitArgs
+        </td>
+        <td>
+          scala.collection.SeqLike.:+
+        </td>
+        <td style="background: #AEF1AE">
+          a._2.:+[com.techsophy.training.Student, List[com.techsophy.training.Student]](s)(immutable.this.List.canBuildFrom[com.techsophy.training.Student])
+        </td>
+      </tr><tr>
+        <td>
+          142
+        </td>
+        <td>
+          193
+        </td>
+        <td>
+          3626
+          -
+          3626
+        </td>
+        <td>
+          TypeApply
+        </td>
+        <td>
+          scala.collection.immutable.List.canBuildFrom
+        </td>
+        <td style="background: #AEF1AE">
+          immutable.this.List.canBuildFrom[com.techsophy.training.Student]
+        </td>
+      </tr><tr>
+        <td>
+          142
+        </td>
+        <td>
+          196
+        </td>
+        <td>
+          3640
+          -
+          3644
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.Tuple4._4
+        </td>
+        <td style="background: #AEF1AE">
+          a._4
+        </td>
+      </tr><tr>
+        <td>
+          142
+        </td>
+        <td>
+          192
+        </td>
+        <td>
+          3615
+          -
+          3619
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.Tuple4._1
+        </td>
+        <td style="background: #AEF1AE">
+          a._1
+        </td>
+      </tr><tr>
+        <td>
+          142
+        </td>
+        <td>
+          195
+        </td>
+        <td>
+          3634
+          -
+          3638
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.Tuple4._3
+        </td>
+        <td style="background: #AEF1AE">
+          a._3
+        </td>
+      </tr><tr>
+        <td>
+          142
+        </td>
+        <td>
+          197
+        </td>
+        <td>
+          3614
+          -
+          3645
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Tuple4.apply
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Tuple4.apply[List[com.techsophy.training.Student], List[com.techsophy.training.Student], List[com.techsophy.training.Student], List[com.techsophy.training.Student]](a._1, a._2.:+[com.techsophy.training.Student, List[com.techsophy.training.Student]](s)(immutable.this.List.canBuildFrom[com.techsophy.training.Student]), a._3, a._4)
+        </td>
+      </tr><tr>
+        <td>
+          143
+        </td>
+        <td>
+          200
+        </td>
+        <td>
+          3689
+          -
+          3689
+        </td>
+        <td>
+          TypeApply
+        </td>
+        <td>
+          scala.collection.immutable.List.canBuildFrom
+        </td>
+        <td style="background: #AEF1AE">
+          immutable.this.List.canBuildFrom[com.techsophy.training.Student]
+        </td>
+      </tr><tr>
+        <td>
+          143
+        </td>
+        <td>
+          202
+        </td>
+        <td>
+          3697
+          -
+          3701
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.Tuple4._4
+        </td>
+        <td style="background: #AEF1AE">
+          a._4
+        </td>
+      </tr><tr>
+        <td>
+          143
+        </td>
+        <td>
+          199
+        </td>
+        <td>
+          3678
+          -
+          3682
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.Tuple4._2
+        </td>
+        <td style="background: #AEF1AE">
+          a._2
+        </td>
+      </tr><tr>
+        <td>
+          143
+        </td>
+        <td>
+          198
+        </td>
+        <td>
+          3672
+          -
+          3676
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.Tuple4._1
+        </td>
+        <td style="background: #AEF1AE">
+          a._1
+        </td>
+      </tr><tr>
+        <td>
+          143
+        </td>
+        <td>
+          201
+        </td>
+        <td>
+          3684
+          -
+          3695
+        </td>
+        <td>
+          ApplyToImplicitArgs
+        </td>
+        <td>
+          scala.collection.SeqLike.:+
+        </td>
+        <td style="background: #AEF1AE">
+          a._3.:+[com.techsophy.training.Student, List[com.techsophy.training.Student]](s)(immutable.this.List.canBuildFrom[com.techsophy.training.Student])
+        </td>
+      </tr><tr>
+        <td>
+          143
+        </td>
+        <td>
+          203
+        </td>
+        <td>
+          3671
+          -
+          3702
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Tuple4.apply
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Tuple4.apply[List[com.techsophy.training.Student], List[com.techsophy.training.Student], List[com.techsophy.training.Student], List[com.techsophy.training.Student]](a._1, a._2, a._3.:+[com.techsophy.training.Student, List[com.techsophy.training.Student]](s)(immutable.this.List.canBuildFrom[com.techsophy.training.Student]), a._4)
+        </td>
+      </tr><tr>
+        <td>
+          144
+        </td>
+        <td>
+          209
+        </td>
+        <td>
+          3728
+          -
+          3759
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Tuple4.apply
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Tuple4.apply[List[com.techsophy.training.Student], List[com.techsophy.training.Student], List[com.techsophy.training.Student], List[com.techsophy.training.Student]](a._1, a._2, a._3, a._4.:+[com.techsophy.training.Student, List[com.techsophy.training.Student]](s)(immutable.this.List.canBuildFrom[com.techsophy.training.Student]))
+        </td>
+      </tr><tr>
+        <td>
+          144
+        </td>
+        <td>
+          205
+        </td>
+        <td>
+          3735
+          -
+          3739
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.Tuple4._2
+        </td>
+        <td style="background: #AEF1AE">
+          a._2
+        </td>
+      </tr><tr>
+        <td>
+          144
+        </td>
+        <td>
+          208
+        </td>
+        <td>
+          3747
+          -
+          3758
+        </td>
+        <td>
+          ApplyToImplicitArgs
+        </td>
+        <td>
+          scala.collection.SeqLike.:+
+        </td>
+        <td style="background: #AEF1AE">
+          a._4.:+[com.techsophy.training.Student, List[com.techsophy.training.Student]](s)(immutable.this.List.canBuildFrom[com.techsophy.training.Student])
+        </td>
+      </tr><tr>
+        <td>
+          144
+        </td>
+        <td>
+          207
+        </td>
+        <td>
+          3752
+          -
+          3752
+        </td>
+        <td>
+          TypeApply
+        </td>
+        <td>
+          scala.collection.immutable.List.canBuildFrom
+        </td>
+        <td style="background: #AEF1AE">
+          immutable.this.List.canBuildFrom[com.techsophy.training.Student]
+        </td>
+      </tr><tr>
+        <td>
+          144
+        </td>
+        <td>
+          204
+        </td>
+        <td>
+          3729
+          -
+          3733
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.Tuple4._1
+        </td>
+        <td style="background: #AEF1AE">
+          a._1
+        </td>
+      </tr><tr>
+        <td>
+          144
+        </td>
+        <td>
+          206
+        </td>
+        <td>
+          3741
+          -
+          3745
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.Tuple4._3
+        </td>
+        <td style="background: #AEF1AE">
+          a._3
+        </td>
+      </tr><tr>
+        <td>
+          152
+        </td>
+        <td>
+          218
+        </td>
+        <td>
+          3866
+          -
+          4009
+        </td>
+        <td>
+          ApplyToImplicitArgs
+        </td>
+        <td>
+          scala.collection.immutable.List.flatMap
+        </td>
+        <td style="background: #AEF1AE">
+          company.branches.flatMap[Int, List[Int]](((branch: com.techsophy.training.Branch) =&gt; branch.consultants.flatMap[Int, List[Int]](((consultant: com.techsophy.training.Consultant) =&gt; consultant.portfolio.map[Int, List[Int]](((customer: com.techsophy.training.Customer) =&gt; customer.value))(immutable.this.List.canBuildFrom[Int])))(immutable.this.List.canBuildFrom[Int])))(immutable.this.List.canBuildFrom[Int])
+        </td>
+      </tr><tr>
+        <td>
+          152
+        </td>
+        <td>
+          217
+        </td>
+        <td>
+          3885
+          -
+          3885
+        </td>
+        <td>
+          TypeApply
+        </td>
+        <td>
+          scala.collection.immutable.List.canBuildFrom
+        </td>
+        <td style="background: #AEF1AE">
+          immutable.this.List.canBuildFrom[Int]
+        </td>
+      </tr><tr>
+        <td>
+          153
+        </td>
+        <td>
+          216
+        </td>
+        <td>
+          3911
+          -
+          4009
+        </td>
+        <td>
+          ApplyToImplicitArgs
+        </td>
+        <td>
+          scala.collection.immutable.List.flatMap
+        </td>
+        <td style="background: #AEF1AE">
+          branch.consultants.flatMap[Int, List[Int]](((consultant: com.techsophy.training.Consultant) =&gt; consultant.portfolio.map[Int, List[Int]](((customer: com.techsophy.training.Customer) =&gt; customer.value))(immutable.this.List.canBuildFrom[Int])))(immutable.this.List.canBuildFrom[Int])
+        </td>
+      </tr><tr>
+        <td>
+          153
+        </td>
+        <td>
+          215
+        </td>
+        <td>
+          3922
+          -
+          3922
+        </td>
+        <td>
+          TypeApply
+        </td>
+        <td>
+          scala.collection.immutable.List.canBuildFrom
+        </td>
+        <td style="background: #AEF1AE">
+          immutable.this.List.canBuildFrom[Int]
+        </td>
+      </tr><tr>
+        <td>
+          154
+        </td>
+        <td>
+          214
+        </td>
+        <td>
+          3950
+          -
+          4009
+        </td>
+        <td>
+          ApplyToImplicitArgs
+        </td>
+        <td>
+          scala.collection.immutable.List.map
+        </td>
+        <td style="background: #AEF1AE">
+          consultant.portfolio.map[Int, List[Int]](((customer: com.techsophy.training.Customer) =&gt; customer.value))(immutable.this.List.canBuildFrom[Int])
+        </td>
+      </tr><tr>
+        <td>
+          154
+        </td>
+        <td>
+          213
+        </td>
+        <td>
+          3959
+          -
+          3959
+        </td>
+        <td>
+          TypeApply
+        </td>
+        <td>
+          scala.collection.immutable.List.canBuildFrom
+        </td>
+        <td style="background: #AEF1AE">
+          immutable.this.List.canBuildFrom[Int]
+        </td>
+      </tr><tr>
+        <td>
+          155
+        </td>
+        <td>
+          212
+        </td>
+        <td>
+          3995
+          -
+          4009
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          com.techsophy.training.Customer.value
+        </td>
+        <td style="background: #AEF1AE">
+          customer.value
+        </td>
+      </tr><tr>
+        <td>
+          156
+        </td>
+        <td>
+          220
+        </td>
+        <td>
+          4055
+          -
+          4065
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Int.+
+        </td>
+        <td style="background: #AEF1AE">
+          acc.+(elem)
+        </td>
+      </tr><tr>
+        <td>
+          156
+        </td>
+        <td>
+          219
+        </td>
+        <td>
+          4034
+          -
+          4035
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          0
+        </td>
+      </tr><tr>
+        <td>
+          156
+        </td>
+        <td>
+          221
+        </td>
+        <td>
+          4014
+          -
+          4068
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.collection.LinearSeqOptimized.foldLeft
+        </td>
+        <td style="background: #AEF1AE">
+          valuesList.foldLeft[Int](0)(((acc: Int, elem: Int) =&gt; acc.+(elem)))
+        </td>
+      </tr><tr>
+        <td>
+          160
+        </td>
+        <td>
+          222
+        </td>
+        <td>
+          4141
+          -
+          4154
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.io.File.&lt;init&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          new java.io.File(dir)
+        </td>
+      </tr><tr>
+        <td>
+          161
+        </td>
+        <td>
+          223
+        </td>
+        <td>
+          4163
+          -
+          4181
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.io.File.exists
+        </td>
+        <td style="background: #AEF1AE">
+          directory.exists()
+        </td>
+      </tr><tr>
+        <td>
+          161
+        </td>
+        <td>
+          231
+        </td>
+        <td>
+          4183
+          -
+          4326
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          {
+  val list: Array[java.io.File] = directory.listFiles();
+  if (list.length.&gt;(0))
+    scala.Some.apply[Int](list.length)
+  else
+    scala.None
+}
+        </td>
+      </tr><tr>
+        <td>
+          162
+        </td>
+        <td>
+          224
+        </td>
+        <td>
+          4202
+          -
+          4223
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.io.File.listFiles
+        </td>
+        <td style="background: #AEF1AE">
+          directory.listFiles()
+        </td>
+      </tr><tr>
+        <td>
+          163
+        </td>
+        <td>
+          225
+        </td>
+        <td>
+          4234
+          -
+          4249
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Int.&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          list.length.&gt;(0)
+        </td>
+      </tr><tr>
+        <td>
+          164
+        </td>
+        <td>
+          227
+        </td>
+        <td>
+          4261
+          -
+          4278
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Some.apply
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Some.apply[Int](list.length)
+        </td>
+      </tr><tr>
+        <td>
+          164
+        </td>
+        <td>
+          226
+        </td>
+        <td>
+          4266
+          -
+          4277
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.Array.length
+        </td>
+        <td style="background: #AEF1AE">
+          list.length
+        </td>
+      </tr><tr>
+        <td>
+          164
+        </td>
+        <td>
+          228
+        </td>
+        <td>
+          4261
+          -
+          4278
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          scala.Some.apply
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Some.apply[Int](list.length)
+        </td>
+      </tr><tr>
+        <td>
+          167
+        </td>
+        <td>
+          229
+        </td>
+        <td>
+          4308
+          -
+          4312
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.None
+        </td>
+        <td style="background: #AEF1AE">
+          scala.None
+        </td>
+      </tr><tr>
+        <td>
+          167
+        </td>
+        <td>
+          230
+        </td>
+        <td>
+          4308
+          -
+          4312
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          scala.None
+        </td>
+        <td style="background: #AEF1AE">
+          scala.None
+        </td>
+      </tr><tr>
+        <td>
+          171
+        </td>
+        <td>
+          232
+        </td>
+        <td>
+          4344
+          -
+          4348
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.None
+        </td>
+        <td style="background: #AEF1AE">
+          scala.None
+        </td>
+      </tr><tr>
+        <td>
+          171
+        </td>
+        <td>
+          233
+        </td>
+        <td>
+          4344
+          -
+          4348
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          scala.None
+        </td>
+        <td style="background: #AEF1AE">
+          scala.None
+        </td>
+      </tr>
+    </table>
+          </div>
+        </div>
+      </body>
+    </html>

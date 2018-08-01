@@ -1,0 +1,545 @@
+<html>
+      <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title id="title">
+          com/skafka/example/SimpleProducer.scala.html
+        </title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.20.1/css/theme.default.min.css" type="text/css"/><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.20.1/js/jquery.tablesorter.min.js"></script><link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" type="text/css"/><script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script><script type="text/javascript">
+        $(document).ready(function() {$(".tablesorter").tablesorter();});
+      </script>
+        <style>
+          table.codegrid { font-family: monospace; font-size: 12px; width: auto!important; }table.statementlist { width: auto!important; font-size: 13px; } table.codegrid td { padding: 0!important; border: 0!important } table td.linenumber { width: 40px!important; } 
+        </style>
+      </head>
+      <body style="font-family: monospace;">
+        <ul class="nav nav-tabs">
+          <li>
+            <a href="#codegrid" data-toggle="tab">Codegrid</a>
+          </li>
+          <li>
+            <a href="#statementlist" data-toggle="tab">Statement List</a>
+          </li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane active" id="codegrid">
+            <pre style='font-size: 12pt; font-family: courier;'>1 <span style=''>package com.skafka.example
+</span>2 <span style=''>import java.util.Properties
+</span>3 <span style=''>
+</span>4 <span style=''>import org.apache.kafka.clients.producer.{ProducerRecord}
+</span>5 <span style=''>import org.apache.kafka.common.errors.WakeupException
+</span>6 <span style=''>import org.apache.kafka.common.serialization.StringSerializer
+</span>7 <span style=''>import org.slf4j.LoggerFactory
+</span>8 <span style=''>
+</span>9 <span style=''>class SimpleProducer extends KafkaProducer {
+</span>10 <span style=''>  val logger = </span><span style='background: #AEF1AE'>LoggerFactory.getLogger(this.getClass)</span><span style=''>
+</span>11 <span style=''>
+</span>12 <span style=''>  private val props = </span><span style='background: #AEF1AE'>new Properties()</span><span style=''>
+</span>13 <span style=''>  </span><span style='background: #AEF1AE'>props.put(&quot;bootstrap.servers&quot;, &quot;localhost:9092&quot;)</span><span style=''>
+</span>14 <span style=''>  </span><span style='background: #AEF1AE'>props.put(&quot;acks&quot;, &quot;all&quot;)</span><span style=''>
+</span>15 <span style=''>  </span><span style='background: #AEF1AE'>props.put(&quot;retries&quot;, &quot;5&quot;)</span><span style=''>
+</span>16 <span style=''>  </span><span style='background: #AEF1AE'>props.put(&quot;key.serializer&quot;, classOf[StringSerializer].getName)</span><span style=''>
+</span>17 <span style=''>  </span><span style='background: #AEF1AE'>props.put(&quot;value.serializer&quot;, classOf[StringSerializer].getName)</span><span style=''>
+</span>18 <span style=''>
+</span>19 <span style=''>  private val producer = </span><span style='background: #AEF1AE'>new org.apache.kafka.clients.producer.KafkaProducer[String, String](props)</span><span style=''>
+</span>20 <span style=''>
+</span>21 <span style=''>  def send(topic: String, message: String): Option[Int] = {
+</span>22 <span style=''>    val record = </span><span style='background: #AEF1AE'>new ProducerRecord[String, String](topic, message)</span><span style=''>
+</span>23 <span style=''>    try {
+</span>24 <span style=''>      </span><span style='background: #AEF1AE'>producer.send(record)
+</span>25 <span style=''></span><span style='background: #AEF1AE'>      Some(1)</span><span style=''>
+</span>26 <span style=''>    }
+</span>27 <span style=''>    catch {
+</span>28 <span style=''>      case wue: WakeupException =&gt;
+</span>29 <span style=''>        </span><span style='background: #F0ADAD'>logger.debug(&quot;Error in reading from kafka &quot;, wue)</span><span style=''>
+</span>30 <span style=''>        </span><span style='background: #F0ADAD'>None</span><span style=''>
+</span>31 <span style=''>      case ex: Exception =&gt;
+</span>32 <span style=''>        </span><span style='background: #F0ADAD'>logger.error(&quot;Error in reading from kafka &quot;, ex)</span><span style=''>
+</span>33 <span style=''>        </span><span style='background: #F0ADAD'>None</span><span style=''>
+</span>34 <span style=''>    }
+</span>35 <span style=''>  }
+</span>36 <span style=''>}
+</span>37 <span style=''>trait KafkaProducer {
+</span>38 <span style=''>  def send(topic : String , message : String) : Any
+</span>39 <span style=''>}
+</span></pre>
+          </div>
+          <div class="tab-pane" id="statementlist">
+            <table cellspacing="0" cellpadding="0" class="table statementlist">
+      <tr>
+        <th>Line</th>
+        <th>Stmt Id</th>
+        <th>Pos</th>
+        <th>Tree</th>
+        <th>Symbol</th>
+        <th>Code</th>
+      </tr><tr>
+        <td>
+          10
+        </td>
+        <td>
+          34
+        </td>
+        <td>
+          322
+          -
+          360
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          org.slf4j.LoggerFactory.getLogger
+        </td>
+        <td style="background: #AEF1AE">
+          org.slf4j.LoggerFactory.getLogger(this.getClass())
+        </td>
+      </tr><tr>
+        <td>
+          10
+        </td>
+        <td>
+          33
+        </td>
+        <td>
+          346
+          -
+          359
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.lang.Object.getClass
+        </td>
+        <td style="background: #AEF1AE">
+          this.getClass()
+        </td>
+      </tr><tr>
+        <td>
+          12
+        </td>
+        <td>
+          35
+        </td>
+        <td>
+          384
+          -
+          400
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.util.Properties.&lt;init&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          new java.util.Properties()
+        </td>
+      </tr><tr>
+        <td>
+          13
+        </td>
+        <td>
+          36
+        </td>
+        <td>
+          403
+          -
+          451
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.util.Hashtable.put
+        </td>
+        <td style="background: #AEF1AE">
+          SimpleProducer.this.props.put(&quot;bootstrap.servers&quot;, &quot;localhost:9092&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          14
+        </td>
+        <td>
+          37
+        </td>
+        <td>
+          454
+          -
+          478
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.util.Hashtable.put
+        </td>
+        <td style="background: #AEF1AE">
+          SimpleProducer.this.props.put(&quot;acks&quot;, &quot;all&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          15
+        </td>
+        <td>
+          38
+        </td>
+        <td>
+          481
+          -
+          506
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.util.Hashtable.put
+        </td>
+        <td style="background: #AEF1AE">
+          SimpleProducer.this.props.put(&quot;retries&quot;, &quot;5&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          16
+        </td>
+        <td>
+          41
+        </td>
+        <td>
+          509
+          -
+          571
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.util.Hashtable.put
+        </td>
+        <td style="background: #AEF1AE">
+          SimpleProducer.this.props.put(&quot;key.serializer&quot;, classOf[org.apache.kafka.common.serialization.StringSerializer].getName())
+        </td>
+      </tr><tr>
+        <td>
+          16
+        </td>
+        <td>
+          40
+        </td>
+        <td>
+          537
+          -
+          570
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.lang.Class.getName
+        </td>
+        <td style="background: #AEF1AE">
+          classOf[org.apache.kafka.common.serialization.StringSerializer].getName()
+        </td>
+      </tr><tr>
+        <td>
+          16
+        </td>
+        <td>
+          39
+        </td>
+        <td>
+          519
+          -
+          535
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;key.serializer&quot;
+        </td>
+      </tr><tr>
+        <td>
+          17
+        </td>
+        <td>
+          44
+        </td>
+        <td>
+          574
+          -
+          638
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.util.Hashtable.put
+        </td>
+        <td style="background: #AEF1AE">
+          SimpleProducer.this.props.put(&quot;value.serializer&quot;, classOf[org.apache.kafka.common.serialization.StringSerializer].getName())
+        </td>
+      </tr><tr>
+        <td>
+          17
+        </td>
+        <td>
+          43
+        </td>
+        <td>
+          604
+          -
+          637
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.lang.Class.getName
+        </td>
+        <td style="background: #AEF1AE">
+          classOf[org.apache.kafka.common.serialization.StringSerializer].getName()
+        </td>
+      </tr><tr>
+        <td>
+          17
+        </td>
+        <td>
+          42
+        </td>
+        <td>
+          584
+          -
+          602
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;value.serializer&quot;
+        </td>
+      </tr><tr>
+        <td>
+          19
+        </td>
+        <td>
+          46
+        </td>
+        <td>
+          665
+          -
+          739
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          org.apache.kafka.clients.producer.KafkaProducer.&lt;init&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          new org.apache.kafka.clients.producer.KafkaProducer[String,String](SimpleProducer.this.props)
+        </td>
+      </tr><tr>
+        <td>
+          19
+        </td>
+        <td>
+          45
+        </td>
+        <td>
+          733
+          -
+          738
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          com.skafka.example.SimpleProducer.props
+        </td>
+        <td style="background: #AEF1AE">
+          SimpleProducer.this.props
+        </td>
+      </tr><tr>
+        <td>
+          22
+        </td>
+        <td>
+          47
+        </td>
+        <td>
+          818
+          -
+          868
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          org.apache.kafka.clients.producer.ProducerRecord.&lt;init&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          new org.apache.kafka.clients.producer.ProducerRecord[String,String](topic, message)
+        </td>
+      </tr><tr>
+        <td>
+          23
+        </td>
+        <td>
+          50
+        </td>
+        <td>
+          885
+          -
+          920
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          {
+  SimpleProducer.this.producer.send(record);
+  scala.Some.apply[Int](1)
+}
+        </td>
+      </tr><tr>
+        <td>
+          24
+        </td>
+        <td>
+          48
+        </td>
+        <td>
+          885
+          -
+          906
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          org.apache.kafka.clients.producer.KafkaProducer.send
+        </td>
+        <td style="background: #AEF1AE">
+          SimpleProducer.this.producer.send(record)
+        </td>
+      </tr><tr>
+        <td>
+          25
+        </td>
+        <td>
+          49
+        </td>
+        <td>
+          913
+          -
+          920
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Some.apply
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Some.apply[Int](1)
+        </td>
+      </tr><tr>
+        <td>
+          29
+        </td>
+        <td>
+          51
+        </td>
+        <td>
+          982
+          -
+          1031
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          org.slf4j.Logger.debug
+        </td>
+        <td style="background: #F0ADAD">
+          SimpleProducer.this.logger.debug(&quot;Error in reading from kafka &quot;, wue)
+        </td>
+      </tr><tr>
+        <td>
+          30
+        </td>
+        <td>
+          52
+        </td>
+        <td>
+          1040
+          -
+          1044
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.None
+        </td>
+        <td style="background: #F0ADAD">
+          scala.None
+        </td>
+      </tr><tr>
+        <td>
+          32
+        </td>
+        <td>
+          53
+        </td>
+        <td>
+          1081
+          -
+          1129
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          org.slf4j.Logger.error
+        </td>
+        <td style="background: #F0ADAD">
+          SimpleProducer.this.logger.error(&quot;Error in reading from kafka &quot;, ex)
+        </td>
+      </tr><tr>
+        <td>
+          33
+        </td>
+        <td>
+          54
+        </td>
+        <td>
+          1138
+          -
+          1142
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.None
+        </td>
+        <td style="background: #F0ADAD">
+          scala.None
+        </td>
+      </tr>
+    </table>
+          </div>
+        </div>
+      </body>
+    </html>

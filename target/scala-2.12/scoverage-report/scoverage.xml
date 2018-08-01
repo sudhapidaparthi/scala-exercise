@@ -1,0 +1,837 @@
+<scoverage 
+statement-count="233" statements-invoked="225" statement-rate="96.57" branch-rate="96.15" version="1.0" timestamp="1533014101387">
+    <packages>
+        <package name="com.skafka.example" statement-count="54" statements-invoked="48" statement-rate="88.89">
+            <classes>
+                <class 
+                name="com.skafka.example.SimpleProducer" filename="com/skafka/example/SimpleProducer.scala" statement-count="22" statements-invoked="18" statement-rate="81.82" branch-rate="100.00">
+                    <methods>
+                        <method 
+                        name="com.skafka.example/SimpleProducer/&lt;none&gt;" statement-count="14" statements-invoked="14" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="com.skafka.example" class="SimpleProducer" class-type="Class" full-class-name="com.skafka.example.SimpleProducer" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/skafka/example/SimpleProducer.scala" method="&lt;none&gt;" start="509" end="571" line="16" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.skafka.example" class="SimpleProducer" class-type="Class" full-class-name="com.skafka.example.SimpleProducer" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/skafka/example/SimpleProducer.scala" method="&lt;none&gt;" start="384" end="400" line="12" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.skafka.example" class="SimpleProducer" class-type="Class" full-class-name="com.skafka.example.SimpleProducer" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/skafka/example/SimpleProducer.scala" method="&lt;none&gt;" start="574" end="638" line="17" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.skafka.example" class="SimpleProducer" class-type="Class" full-class-name="com.skafka.example.SimpleProducer" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/skafka/example/SimpleProducer.scala" method="&lt;none&gt;" start="481" end="506" line="15" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.skafka.example" class="SimpleProducer" class-type="Class" full-class-name="com.skafka.example.SimpleProducer" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/skafka/example/SimpleProducer.scala" method="&lt;none&gt;" start="665" end="739" line="19" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.skafka.example" class="SimpleProducer" class-type="Class" full-class-name="com.skafka.example.SimpleProducer" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/skafka/example/SimpleProducer.scala" method="&lt;none&gt;" start="537" end="570" line="16" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.skafka.example" class="SimpleProducer" class-type="Class" full-class-name="com.skafka.example.SimpleProducer" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/skafka/example/SimpleProducer.scala" method="&lt;none&gt;" start="604" end="637" line="17" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.skafka.example" class="SimpleProducer" class-type="Class" full-class-name="com.skafka.example.SimpleProducer" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/skafka/example/SimpleProducer.scala" method="&lt;none&gt;" start="322" end="360" line="10" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.skafka.example" class="SimpleProducer" class-type="Class" full-class-name="com.skafka.example.SimpleProducer" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/skafka/example/SimpleProducer.scala" method="&lt;none&gt;" start="454" end="478" line="14" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.skafka.example" class="SimpleProducer" class-type="Class" full-class-name="com.skafka.example.SimpleProducer" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/skafka/example/SimpleProducer.scala" method="&lt;none&gt;" start="733" end="738" line="19" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.skafka.example" class="SimpleProducer" class-type="Class" full-class-name="com.skafka.example.SimpleProducer" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/skafka/example/SimpleProducer.scala" method="&lt;none&gt;" start="403" end="451" line="13" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.skafka.example" class="SimpleProducer" class-type="Class" full-class-name="com.skafka.example.SimpleProducer" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/skafka/example/SimpleProducer.scala" method="&lt;none&gt;" start="519" end="535" line="16" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.skafka.example" class="SimpleProducer" class-type="Class" full-class-name="com.skafka.example.SimpleProducer" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/skafka/example/SimpleProducer.scala" method="&lt;none&gt;" start="584" end="602" line="17" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.skafka.example" class="SimpleProducer" class-type="Class" full-class-name="com.skafka.example.SimpleProducer" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/skafka/example/SimpleProducer.scala" method="&lt;none&gt;" start="346" end="359" line="10" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="com.skafka.example/SimpleProducer/send" statement-count="8" statements-invoked="4" statement-rate="50.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="com.skafka.example" class="SimpleProducer" class-type="Class" full-class-name="com.skafka.example.SimpleProducer" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/skafka/example/SimpleProducer.scala" method="send" start="885" end="920" line="23" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.skafka.example" class="SimpleProducer" class-type="Class" full-class-name="com.skafka.example.SimpleProducer" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/skafka/example/SimpleProducer.scala" method="send" start="1081" end="1129" line="32" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="com.skafka.example" class="SimpleProducer" class-type="Class" full-class-name="com.skafka.example.SimpleProducer" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/skafka/example/SimpleProducer.scala" method="send" start="818" end="868" line="22" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.skafka.example" class="SimpleProducer" class-type="Class" full-class-name="com.skafka.example.SimpleProducer" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/skafka/example/SimpleProducer.scala" method="send" start="913" end="920" line="25" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.skafka.example" class="SimpleProducer" class-type="Class" full-class-name="com.skafka.example.SimpleProducer" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/skafka/example/SimpleProducer.scala" method="send" start="1040" end="1044" line="30" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="com.skafka.example" class="SimpleProducer" class-type="Class" full-class-name="com.skafka.example.SimpleProducer" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/skafka/example/SimpleProducer.scala" method="send" start="1138" end="1142" line="33" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="com.skafka.example" class="SimpleProducer" class-type="Class" full-class-name="com.skafka.example.SimpleProducer" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/skafka/example/SimpleProducer.scala" method="send" start="885" end="906" line="24" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.skafka.example" class="SimpleProducer" class-type="Class" full-class-name="com.skafka.example.SimpleProducer" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/skafka/example/SimpleProducer.scala" method="send" start="982" end="1031" line="29" branch="false" invocation-count="0" ignored="false">
+</statement>
+                            </statements>
+</method>
+                    </methods>
+</class>
+                <class 
+                name="com.skafka.example.SimpleConsumer" filename="com/skafka/example/SimpleConsumer.scala" statement-count="32" statements-invoked="30" statement-rate="93.75" branch-rate="100.00">
+                    <methods>
+                        <method 
+                        name="com.skafka.example/SimpleConsumer/read" statement-count="12" statements-invoked="10" statement-rate="83.33" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="com.skafka.example" class="SimpleConsumer" class-type="Class" full-class-name="com.skafka.example.SimpleConsumer" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/skafka/example/SimpleConsumer.scala" method="read" start="1069" end="1081" line="28" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.skafka.example" class="SimpleConsumer" class-type="Class" full-class-name="com.skafka.example.SimpleConsumer" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/skafka/example/SimpleConsumer.scala" method="read" start="1325" end="1329" line="36" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.skafka.example" class="SimpleConsumer" class-type="Class" full-class-name="com.skafka.example.SimpleConsumer" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/skafka/example/SimpleConsumer.scala" method="read" start="1057" end="1057" line="28" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.skafka.example" class="SimpleConsumer" class-type="Class" full-class-name="com.skafka.example.SimpleConsumer" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/skafka/example/SimpleConsumer.scala" method="read" start="1169" end="1218" line="32" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="com.skafka.example" class="SimpleConsumer" class-type="Class" full-class-name="com.skafka.example.SimpleConsumer" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/skafka/example/SimpleConsumer.scala" method="read" start="1017" end="1039" line="27" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.skafka.example" class="SimpleConsumer" class-type="Class" full-class-name="com.skafka.example.SimpleConsumer" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/skafka/example/SimpleConsumer.scala" method="read" start="1268" end="1316" line="35" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.skafka.example" class="SimpleConsumer" class-type="Class" full-class-name="com.skafka.example.SimpleConsumer" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/skafka/example/SimpleConsumer.scala" method="read" start="1068" end="1096" line="28" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.skafka.example" class="SimpleConsumer" class-type="Class" full-class-name="com.skafka.example.SimpleConsumer" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/skafka/example/SimpleConsumer.scala" method="read" start="970" end="1108" line="26" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.skafka.example" class="SimpleConsumer" class-type="Class" full-class-name="com.skafka.example.SimpleConsumer" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/skafka/example/SimpleConsumer.scala" method="read" start="1046" end="1108" line="28" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.skafka.example" class="SimpleConsumer" class-type="Class" full-class-name="com.skafka.example.SimpleConsumer" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/skafka/example/SimpleConsumer.scala" method="read" start="1031" end="1038" line="27" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.skafka.example" class="SimpleConsumer" class-type="Class" full-class-name="com.skafka.example.SimpleConsumer" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/skafka/example/SimpleConsumer.scala" method="read" start="1227" end="1231" line="33" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="com.skafka.example" class="SimpleConsumer" class-type="Class" full-class-name="com.skafka.example.SimpleConsumer" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/skafka/example/SimpleConsumer.scala" method="read" start="1083" end="1095" line="28" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="com.skafka.example/SimpleConsumer/&lt;none&gt;" statement-count="20" statements-invoked="20" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="com.skafka.example" class="SimpleConsumer" class-type="Class" full-class-name="com.skafka.example.SimpleConsumer" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/skafka/example/SimpleConsumer.scala" method="&lt;none&gt;" start="573" end="603" line="18" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.skafka.example" class="SimpleConsumer" class-type="Class" full-class-name="com.skafka.example.SimpleConsumer" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/skafka/example/SimpleConsumer.scala" method="&lt;none&gt;" start="807" end="881" line="23" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.skafka.example" class="SimpleConsumer" class-type="Class" full-class-name="com.skafka.example.SimpleConsumer" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/skafka/example/SimpleConsumer.scala" method="&lt;none&gt;" start="606" end="672" line="19" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.skafka.example" class="SimpleConsumer" class-type="Class" full-class-name="com.skafka.example.SimpleConsumer" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/skafka/example/SimpleConsumer.scala" method="&lt;none&gt;" start="884" end="910" line="24" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.skafka.example" class="SimpleConsumer" class-type="Class" full-class-name="com.skafka.example.SimpleConsumer" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/skafka/example/SimpleConsumer.scala" method="&lt;none&gt;" start="408" end="446" line="12" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.skafka.example" class="SimpleConsumer" class-type="Class" full-class-name="com.skafka.example.SimpleConsumer" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/skafka/example/SimpleConsumer.scala" method="&lt;none&gt;" start="521" end="570" line="17" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.skafka.example" class="SimpleConsumer" class-type="Class" full-class-name="com.skafka.example.SimpleConsumer" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/skafka/example/SimpleConsumer.scala" method="&lt;none&gt;" start="675" end="743" line="20" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.skafka.example" class="SimpleConsumer" class-type="Class" full-class-name="com.skafka.example.SimpleConsumer" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/skafka/example/SimpleConsumer.scala" method="&lt;none&gt;" start="502" end="518" line="16" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.skafka.example" class="SimpleConsumer" class-type="Class" full-class-name="com.skafka.example.SimpleConsumer" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/skafka/example/SimpleConsumer.scala" method="&lt;none&gt;" start="707" end="742" line="20" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.skafka.example" class="SimpleConsumer" class-type="Class" full-class-name="com.skafka.example.SimpleConsumer" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/skafka/example/SimpleConsumer.scala" method="&lt;none&gt;" start="875" end="880" line="23" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.skafka.example" class="SimpleConsumer" class-type="Class" full-class-name="com.skafka.example.SimpleConsumer" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/skafka/example/SimpleConsumer.scala" method="&lt;none&gt;" start="595" end="602" line="18" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.skafka.example" class="SimpleConsumer" class-type="Class" full-class-name="com.skafka.example.SimpleConsumer" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/skafka/example/SimpleConsumer.scala" method="&lt;none&gt;" start="636" end="671" line="19" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.skafka.example" class="SimpleConsumer" class-type="Class" full-class-name="com.skafka.example.SimpleConsumer" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/skafka/example/SimpleConsumer.scala" method="&lt;none&gt;" start="432" end="445" line="12" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.skafka.example" class="SimpleConsumer" class-type="Class" full-class-name="com.skafka.example.SimpleConsumer" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/skafka/example/SimpleConsumer.scala" method="&lt;none&gt;" start="904" end="909" line="24" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.skafka.example" class="SimpleConsumer" class-type="Class" full-class-name="com.skafka.example.SimpleConsumer" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/skafka/example/SimpleConsumer.scala" method="&lt;none&gt;" start="616" end="634" line="19" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.skafka.example" class="SimpleConsumer" class-type="Class" full-class-name="com.skafka.example.SimpleConsumer" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/skafka/example/SimpleConsumer.scala" method="&lt;none&gt;" start="904" end="909" line="24" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.skafka.example" class="SimpleConsumer" class-type="Class" full-class-name="com.skafka.example.SimpleConsumer" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/skafka/example/SimpleConsumer.scala" method="&lt;none&gt;" start="472" end="478" line="14" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.skafka.example" class="SimpleConsumer" class-type="Class" full-class-name="com.skafka.example.SimpleConsumer" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/skafka/example/SimpleConsumer.scala" method="&lt;none&gt;" start="685" end="705" line="20" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.skafka.example" class="SimpleConsumer" class-type="Class" full-class-name="com.skafka.example.SimpleConsumer" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/skafka/example/SimpleConsumer.scala" method="&lt;none&gt;" start="746" end="780" line="21" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.skafka.example" class="SimpleConsumer" class-type="Class" full-class-name="com.skafka.example.SimpleConsumer" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/skafka/example/SimpleConsumer.scala" method="&lt;none&gt;" start="583" end="593" line="18" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                    </methods>
+</class>
+            </classes>
+        </package>
+        <package name="com.techsophy.training" statement-count="179" statements-invoked="177" statement-rate="98.88">
+            <classes>
+                <class 
+                name="com.techsophy.training.Exercise" filename="com/techsophy/training/Exercise.scala" statement-count="179" statements-invoked="177" statement-rate="98.88" branch-rate="95.83">
+                    <methods>
+                        <method 
+                        name="com.techsophy.training/Exercise/removeOdd" statement-count="10" statements-invoked="10" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="removeOdd" start="1607" end="1625" line="74" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="removeOdd" start="1593" end="1724" line="74" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="removeOdd" start="1698" end="1708" line="74" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="removeOdd" start="1689" end="1722" line="74" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="removeOdd" start="1712" end="1722" line="74" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="removeOdd" start="1685" end="1723" line="74" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="removeOdd" start="1673" end="1679" line="74" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="removeOdd" start="1689" end="1708" line="74" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="removeOdd" start="1685" end="1723" line="74" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="removeOdd" start="1652" end="1671" line="74" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="com.techsophy.training/Exercise/reverse" statement-count="8" statements-invoked="8" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="reverse" start="608" end="614" line="32" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="reverse" start="657" end="657" line="35" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="reverse" start="660" end="669" line="35" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="reverse" start="638" end="669" line="35" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="reverse" start="608" end="614" line="32" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="reverse" start="586" end="598" line="31" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="reverse" start="646" end="655" line="35" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="reverse" start="638" end="669" line="35" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="com.techsophy.training/Exercise/countFiles" statement-count="12" statements-invoked="12" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="countFiles" start="4261" end="4278" line="164" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="countFiles" start="4266" end="4277" line="164" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="countFiles" start="4308" end="4312" line="167" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="countFiles" start="4163" end="4181" line="161" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="countFiles" start="4344" end="4348" line="171" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="countFiles" start="4234" end="4249" line="163" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="countFiles" start="4261" end="4278" line="164" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="countFiles" start="4141" end="4154" line="160" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="countFiles" start="4183" end="4326" line="161" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="countFiles" start="4308" end="4312" line="167" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="countFiles" start="4202" end="4223" line="162" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="countFiles" start="4344" end="4348" line="171" branch="true" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="com.techsophy.training/Exercise/spiltByBranch" statement-count="32" statements-invoked="32" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="spiltByBranch" start="3689" end="3689" line="143" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="spiltByBranch" start="3728" end="3759" line="144" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="spiltByBranch" start="3453" end="3468" line="138" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="spiltByBranch" start="3557" end="3588" line="141" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="spiltByBranch" start="3621" end="3632" line="142" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="spiltByBranch" start="3514" end="3522" line="140" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="spiltByBranch" start="3418" end="3486" line="138" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="spiltByBranch" start="3626" end="3626" line="142" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="spiltByBranch" start="3491" end="3773" line="139" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="spiltByBranch" start="3697" end="3701" line="143" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="spiltByBranch" start="3735" end="3739" line="144" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="spiltByBranch" start="3558" end="3569" line="141" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="spiltByBranch" start="3640" end="3644" line="142" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="spiltByBranch" start="3436" end="3451" line="138" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="spiltByBranch" start="3678" end="3682" line="143" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="spiltByBranch" start="3747" end="3758" line="144" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="spiltByBranch" start="3583" end="3587" line="141" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="spiltByBranch" start="3577" end="3581" line="141" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="spiltByBranch" start="3419" end="3434" line="138" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="spiltByBranch" start="3752" end="3752" line="144" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="spiltByBranch" start="3672" end="3676" line="143" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="spiltByBranch" start="3470" end="3485" line="138" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="spiltByBranch" start="3500" end="3500" line="139" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="spiltByBranch" start="3615" end="3619" line="142" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="spiltByBranch" start="3684" end="3695" line="143" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="spiltByBranch" start="3563" end="3563" line="141" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="spiltByBranch" start="3634" end="3638" line="142" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="spiltByBranch" start="3729" end="3733" line="144" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="spiltByBranch" start="3671" end="3702" line="143" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="spiltByBranch" start="3571" end="3575" line="141" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="spiltByBranch" start="3614" end="3645" line="142" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="spiltByBranch" start="3741" end="3745" line="144" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="com.techsophy.training/Exercise/concatenate" statement-count="11" statements-invoked="11" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="concatenate" start="1917" end="1937" line="79" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="concatenate" start="1833" end="1859" line="78" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="concatenate" start="1927" end="1927" line="79" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="concatenate" start="1928" end="1932" line="79" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="concatenate" start="1922" end="1937" line="79" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="concatenate" start="1877" end="1939" line="79" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="concatenate" start="1845" end="1845" line="78" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="concatenate" start="1900" end="1900" line="79" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="concatenate" start="1848" end="1859" line="78" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="concatenate" start="1890" end="1894" line="79" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="concatenate" start="1934" end="1934" line="79" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="com.techsophy.training/Exercise/wordCount" statement-count="3" statements-invoked="3" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="wordCount" start="1296" end="1356" line="66" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="wordCount" start="1347" end="1355" line="66" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="wordCount" start="1296" end="1313" line="66" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="com.techsophy.training/Exercise/fill" statement-count="5" statements-invoked="5" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="fill" start="481" end="520" line="26" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="fill" start="451" end="457" line="23" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="fill" start="427" end="441" line="22" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="fill" start="489" end="520" line="26" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="fill" start="451" end="457" line="23" branch="true" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="com.techsophy.training/Exercise/dedupe" statement-count="8" statements-invoked="8" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="dedupe" start="1479" end="1490" line="70" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="dedupe" start="1512" end="1521" line="70" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="dedupe" start="1492" end="1498" line="70" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="dedupe" start="1411" end="1522" line="70" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="dedupe" start="1426" end="1441" line="70" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="dedupe" start="1468" end="1490" line="70" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="dedupe" start="1504" end="1521" line="70" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="dedupe" start="1431" end="1440" line="70" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="com.techsophy.training/Exercise/appraisal" statement-count="32" statements-invoked="32" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="appraisal" start="3218" end="3218" line="132" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="appraisal" start="2940" end="3013" line="121" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="appraisal" start="3135" end="3183" line="129" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="appraisal" start="3214" end="3279" line="132" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="appraisal" start="3055" end="3077" line="126" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="appraisal" start="3121" end="3121" line="129" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="appraisal" start="2926" end="2938" line="121" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="appraisal" start="3218" end="3218" line="132" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="appraisal" start="3121" end="3121" line="129" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="appraisal" start="2984" end="2987" line="123" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="appraisal" start="3035" end="3078" line="126" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="appraisal" start="3117" end="3184" line="129" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="appraisal" start="2893" end="2893" line="120" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="appraisal" start="3169" end="3182" line="129" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="appraisal" start="3232" end="3278" line="132" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="appraisal" start="2966" end="3005" line="123" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="appraisal" start="2873" end="2874" line="119" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="appraisal" start="3061" end="3077" line="126" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="appraisal" start="3218" end="3218" line="132" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="appraisal" start="3055" end="3058" line="126" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="appraisal" start="3121" end="3121" line="129" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="appraisal" start="3117" end="3184" line="129" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="appraisal" start="3214" end="3279" line="132" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="appraisal" start="2956" end="2957" line="122" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="appraisal" start="3035" end="3078" line="126" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="appraisal" start="3264" end="3277" line="132" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="appraisal" start="2984" end="3004" line="123" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="appraisal" start="3142" end="3158" line="129" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="appraisal" start="2879" end="3293" line="120" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="appraisal" start="2990" end="3004" line="123" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="appraisal" start="3248" end="3262" line="132" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="appraisal" start="3097" end="3105" line="128" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="com.techsophy.training/Exercise/merge" statement-count="8" statements-invoked="8" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="merge" start="2754" end="2774" line="113" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="merge" start="2516" end="2519" line="104" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="merge" start="2617" end="2662" line="108" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="merge" start="2694" end="2716" line="110" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="merge" start="2752" end="2774" line="113" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="merge" start="2629" end="2661" line="108" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="merge" start="2696" end="2716" line="110" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="merge" start="2675" end="2680" line="109" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="com.techsophy.training/Exercise/rotate" statement-count="12" statements-invoked="12" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="rotate" start="814" end="838" line="43" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="rotate" start="749" end="761" line="40" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="rotate" start="876" end="900" line="46" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="rotate" start="822" end="828" line="43" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="rotate" start="822" end="838" line="43" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="rotate" start="890" end="900" line="46" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="rotate" start="796" end="802" line="42" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="rotate" start="766" end="908" line="41" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="rotate" start="868" end="900" line="46" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="rotate" start="776" end="777" line="41" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="rotate" start="832" end="838" line="43" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="rotate" start="876" end="886" line="46" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="com.techsophy.training/Exercise/zip" statement-count="3" statements-invoked="3" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="zip" start="2291" end="2294" line="95" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="zip" start="2368" end="2388" line="97" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="zip" start="2318" end="2321" line="96" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="com.techsophy.training/Exercise/getCompanyValue" statement-count="10" statements-invoked="10" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="getCompanyValue" start="3866" end="4009" line="152" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="getCompanyValue" start="4055" end="4065" line="156" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="getCompanyValue" start="3950" end="4009" line="154" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="getCompanyValue" start="3885" end="3885" line="152" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="getCompanyValue" start="3911" end="4009" line="153" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="getCompanyValue" start="4034" end="4035" line="156" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="getCompanyValue" start="3959" end="3959" line="154" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="getCompanyValue" start="4014" end="4068" line="156" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="getCompanyValue" start="3995" end="4009" line="155" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="getCompanyValue" start="3922" end="3922" line="153" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="com.techsophy.training/Exercise/&lt;none&gt;" statement-count="2" statements-invoked="2" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="&lt;none&gt;" start="118" end="156" line="9" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="&lt;none&gt;" start="142" end="155" line="9" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="com.techsophy.training/Exercise/sum" statement-count="8" statements-invoked="8" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="sum" start="1048" end="1067" line="54" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="sum" start="1092" end="1096" line="57" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="sum" start="1020" end="1033" line="53" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="sum" start="1059" end="1067" line="54" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="sum" start="1043" end="1068" line="54" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="sum" start="1092" end="1096" line="57" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="sum" start="1003" end="1033" line="53" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="sum" start="1043" end="1068" line="54" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="com.techsophy.training/Exercise/concat" statement-count="2" statements-invoked="2" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="concat" start="1176" end="1235" line="62" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="concat" start="1227" end="1233" line="62" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="com.techsophy.training/Exercise/show" statement-count="7" statements-invoked="7" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="show" start="223" end="248" line="13" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="show" start="270" end="328" line="14" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="show" start="230" end="230" line="13" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="show" start="282" end="282" line="14" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="show" start="313" end="328" line="15" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="show" start="339" end="356" line="17" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="show" start="233" end="234" line="13" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="com.techsophy.training/Exercise/removeKeys" statement-count="6" statements-invoked="4" statement-rate="66.67" branch-rate="50.00">
+                            <statements>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="removeKeys" start="2091" end="2109" line="86" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="removeKeys" start="2087" end="2087" line="86" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="removeKeys" start="2121" end="2138" line="87" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="removeKeys" start="2061" end="2146" line="85" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="removeKeys" start="2128" end="2138" line="87" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.techsophy.training" class="Exercise" class-type="Class" full-class-name="com.techsophy.training.Exercise" source="/home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala" method="removeKeys" start="2087" end="2087" line="86" branch="true" invocation-count="0" ignored="false">
+</statement>
+                            </statements>
+</method>
+                    </methods>
+</class>
+            </classes>
+        </package>
+    </packages>
+</scoverage>

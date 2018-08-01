@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="5.0">
+ <file name="/home/sudha/IdeaProjects/Project2/src/main/scala/com/skafka/example/SimpleConsumer.scala">
+  <error column="67" line="27" source="org.scalastyle.scalariform.MagicNumberChecker" severity="warning" message="Magic Number"/>
+ </file>
+</checkstyle>

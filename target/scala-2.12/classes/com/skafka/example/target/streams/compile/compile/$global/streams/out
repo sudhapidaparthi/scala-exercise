@@ -1,0 +1,61 @@
+[0m[[0m[31merror[0m] [0m[0m/home/sudha/IdeaProjects/Project2/src/main/scala/com/skafka/example/SimpleConsumer.scala:2:12: object apache is not a member of package org[0m
+[0m[[0m[31merror[0m] [0m[0mimport org.apache.kafka.clients.consumer.{ConsumerRecords}[0m
+[0m[[0m[31merror[0m] [0m[0m           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/sudha/IdeaProjects/Project2/src/main/scala/com/skafka/example/SimpleConsumer.scala:5:12: object apache is not a member of package org[0m
+[0m[[0m[31merror[0m] [0m[0mimport org.apache.kafka.common.errors.WakeupException[0m
+[0m[[0m[31merror[0m] [0m[0m           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/sudha/IdeaProjects/Project2/src/main/scala/com/skafka/example/SimpleConsumer.scala:6:12: object apache is not a member of package org[0m
+[0m[[0m[31merror[0m] [0m[0mimport org.apache.kafka.common.serialization.StringDeserializer[0m
+[0m[[0m[31merror[0m] [0m[0m           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/sudha/IdeaProjects/Project2/src/main/scala/com/skafka/example/SimpleConsumer.scala:7:12: object slf4j is not a member of package org[0m
+[0m[[0m[31merror[0m] [0m[0mimport org.slf4j.LoggerFactory[0m
+[0m[[0m[31merror[0m] [0m[0m           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/sudha/IdeaProjects/Project2/src/main/scala/com/skafka/example/SimpleConsumer.scala:12:16: not found: value LoggerFactory[0m
+[0m[[0m[31merror[0m] [0m[0m  val logger = LoggerFactory.getLogger(this.getClass)[0m
+[0m[[0m[31merror[0m] [0m[0m               ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/sudha/IdeaProjects/Project2/src/main/scala/com/skafka/example/SimpleConsumer.scala:18:41: not found: type StringDeserializer[0m
+[0m[[0m[31merror[0m] [0m[0m  props.put("key.deserializer", classOf[StringDeserializer].getName)[0m
+[0m[[0m[31merror[0m] [0m[0m                                        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/sudha/IdeaProjects/Project2/src/main/scala/com/skafka/example/SimpleConsumer.scala:19:43: not found: type StringDeserializer[0m
+[0m[[0m[31merror[0m] [0m[0m  props.put("value.deserializer", classOf[StringDeserializer].getName)[0m
+[0m[[0m[31merror[0m] [0m[0m                                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/sudha/IdeaProjects/Project2/src/main/scala/com/skafka/example/SimpleConsumer.scala:22:34: object apache is not a member of package org[0m
+[0m[[0m[31merror[0m] [0m[0m  private val consumer = new org.apache.kafka.clients.consumer.KafkaConsumer[String, String](props)[0m
+[0m[[0m[31merror[0m] [0m[0m                                 ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/sudha/IdeaProjects/Project2/src/main/scala/com/skafka/example/SimpleConsumer.scala:25:20: not found: type ConsumerRecords[0m
+[0m[[0m[31merror[0m] [0m[0m      val records: ConsumerRecords[String, String] = consumer.poll(timeout)[0m
+[0m[[0m[31merror[0m] [0m[0m                   ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/sudha/IdeaProjects/Project2/src/main/scala/com/skafka/example/SimpleConsumer.scala:32:17: not found: type WakeupException[0m
+[0m[[0m[31merror[0m] [0m[0m      case wue: WakeupException =>[0m
+[0m[[0m[31merror[0m] [0m[0m                ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/sudha/IdeaProjects/Project2/src/main/scala/com/skafka/example/SimpleProducer.scala:4:12: object apache is not a member of package org[0m
+[0m[[0m[31merror[0m] [0m[0mimport org.apache.kafka.clients.producer.{ProducerRecord}[0m
+[0m[[0m[31merror[0m] [0m[0m           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/sudha/IdeaProjects/Project2/src/main/scala/com/skafka/example/SimpleProducer.scala:5:12: object apache is not a member of package org[0m
+[0m[[0m[31merror[0m] [0m[0mimport org.apache.kafka.common.errors.WakeupException[0m
+[0m[[0m[31merror[0m] [0m[0m           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/sudha/IdeaProjects/Project2/src/main/scala/com/skafka/example/SimpleProducer.scala:6:12: object apache is not a member of package org[0m
+[0m[[0m[31merror[0m] [0m[0mimport org.apache.kafka.common.serialization.StringSerializer[0m
+[0m[[0m[31merror[0m] [0m[0m           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/sudha/IdeaProjects/Project2/src/main/scala/com/skafka/example/SimpleProducer.scala:7:12: object slf4j is not a member of package org[0m
+[0m[[0m[31merror[0m] [0m[0mimport org.slf4j.LoggerFactory[0m
+[0m[[0m[31merror[0m] [0m[0m           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/sudha/IdeaProjects/Project2/src/main/scala/com/skafka/example/SimpleProducer.scala:10:16: not found: value LoggerFactory[0m
+[0m[[0m[31merror[0m] [0m[0m  val logger = LoggerFactory.getLogger(this.getClass)[0m
+[0m[[0m[31merror[0m] [0m[0m               ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/sudha/IdeaProjects/Project2/src/main/scala/com/skafka/example/SimpleProducer.scala:16:39: not found: type StringSerializer[0m
+[0m[[0m[31merror[0m] [0m[0m  props.put("key.serializer", classOf[StringSerializer].getName)[0m
+[0m[[0m[31merror[0m] [0m[0m                                      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/sudha/IdeaProjects/Project2/src/main/scala/com/skafka/example/SimpleProducer.scala:17:41: not found: type StringSerializer[0m
+[0m[[0m[31merror[0m] [0m[0m  props.put("value.serializer", classOf[StringSerializer].getName)[0m
+[0m[[0m[31merror[0m] [0m[0m                                        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/sudha/IdeaProjects/Project2/src/main/scala/com/skafka/example/SimpleProducer.scala:19:34: object apache is not a member of package org[0m
+[0m[[0m[31merror[0m] [0m[0m  private val producer = new org.apache.kafka.clients.producer.KafkaProducer[String, String](props)[0m
+[0m[[0m[31merror[0m] [0m[0m                                 ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/sudha/IdeaProjects/Project2/src/main/scala/com/skafka/example/SimpleProducer.scala:22:22: not found: type ProducerRecord[0m
+[0m[[0m[31merror[0m] [0m[0m    val record = new ProducerRecord[String, String](topic, message)[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/sudha/IdeaProjects/Project2/src/main/scala/com/skafka/example/SimpleProducer.scala:28:17: not found: type WakeupException[0m
+[0m[[0m[31merror[0m] [0m[0m      case wue: WakeupException =>[0m
+[0m[[0m[31merror[0m] [0m[0m                ^[0m
+[0m[[0m[31merror[0m] [0m[0m20 errors found[0m

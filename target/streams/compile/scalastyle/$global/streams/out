@@ -1,0 +1,16 @@
+[0m[[0m[0minfo[0m] [0m[0mscalastyle using config /home/sudha/IdeaProjects/Project2/scalastyle-config.xml[0m
+[0m[[0m[0mdebug[0m] [0m[0mStarting scalastyle[0m
+[0m[[0m[0mdebug[0m] [0m[0mstart file /home/sudha/IdeaProjects/Project2/src/main/scala/com/skafka/example/SimpleConsumer.scala[0m
+[0m[[0m[33mwarn[0m] [0m[0m/home/sudha/IdeaProjects/Project2/src/main/scala/com/skafka/example/SimpleConsumer.scala:27:67: Magic Number[0m
+[0m[[0m[0mdebug[0m] [0m[0mend file /home/sudha/IdeaProjects/Project2/src/main/scala/com/skafka/example/SimpleConsumer.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0mstart file /home/sudha/IdeaProjects/Project2/src/main/scala/com/skafka/example/SimpleProducer.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0mend file /home/sudha/IdeaProjects/Project2/src/main/scala/com/skafka/example/SimpleProducer.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0mstart file /home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0mend file /home/sudha/IdeaProjects/Project2/src/main/scala/com/techsophy/training/Exercise.scala[0m
+[0m[[0m[0minfo[0m] [0m[0mscalastyle Processed 3 file(s)[0m
+[0m[[0m[0minfo[0m] [0m[0mscalastyle Found 0 errors[0m
+[0m[[0m[0minfo[0m] [0m[0mscalastyle Found 1 warnings[0m
+[0m[[0m[0minfo[0m] [0m[0mscalastyle Found 0 infos[0m
+[0m[[0m[0minfo[0m] [0m[0mscalastyle Finished in 5 ms[0m
+[0m[[0m[32msuccess[0m] [0m[0mcreated output: /home/sudha/IdeaProjects/Project2/target[0m
+[0m[[0m[33mwarn[0m] [0m[0mwarnings exist[0m
